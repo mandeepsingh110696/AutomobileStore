@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>
+          
+
+        </title>
+
+        <link rel="stylesheet" href="../css/logreg.css" >
+	
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../javascript/register.js"></script>
+	<script src="../javascript/login.js"></script>
+	<script src="../javascript/script.js"></script>
+
+    </head>
+    <body>
+        
+        <div class="hero">
+            <div class="form-box">
+           <div>
+               <div class="logo">
+			       
+                   <img src="../Images/goldnewlogo.png" alt="logo"> <h2>Automobile</h2>
+               </div>
+           </div>
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn"  onclick="login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <div class="social-icons">
+					<a href="https://www.facebook.com">
+                    <img src="../Images/fb.png" alt="W3Schools.com" >
+                    </a>
+                   <a href="https://www.twitter.com">
+                    <img src="../Images/twit.jpg" alt="twitter" >
+                    </a>
+					<a href="https://www.instagram.com">
+                    <img src="../Images/insta.jpg" alt="instagram" >
+                    </a>
+					<a href="https://www.gmail.com">
+                    <img src="../Images/mail.jpg" alt="gmail" >
+                    </a>
+
+                </div>
+				
+                <div class="input-group" id="Login"  >
+				<br>
+                    <input type="text" id="email" name="ëmail" class="input-field"  placeholder="Email Id"  >
+                    <input type="text" id="password" name="password" class="input-field" placeholder="Password" >
+                    <input type ="checkbox"   class="check-box"><span>Remember Password</span>
+                    <input type="button"  value="Log in" class="submit-btn" id="loginclick" name="loginclick" onclick="loginn()" >
+					
+				
+                </div>
+				
+                <form class="input-group"  id="Register"> 
+				  <br>
+                    <input  type="text" class="input-field" id="fname" name="fname" placeholder="First Name"/>
+                     <input type="text" class="input-field" id="lname" name="lname" placeholder="Last Name" />
+					  <input type="text" class="input-field" id="ema" name="ema"  placeholder="Email Id"/>
+					  <input type="text" class="input-field" id="add" name="add"  placeholder="Address"/>
+					 <input type="text" class="input-field" id="pass"  name="pass"  placeholder="Password" />
+                    <input type="text" class="input-field" id="cpass" name="cpass" placeholder="Confirm Password" />
+                    <input type="text" class="input-field" id="phno" name="phno" placeholder="Phone Number"/>
+                      <br> 
+                    <input type="button" class="submit-btn" value="REGISTER" id="clikk" name="clikk" onclick="validation()">
+                </form>
+            </div>
+            
+        </div>
+
+      
+		    <script>
+
+      
+
+            var x= document.getElementById("Login");
+            var y= document.getElementById("Register");
+            var z= document.getElementById("btn");
+            function register(){
+                x.style.left="-400px";
+                y.style.left="2px";
+                z.style.left="110px";
+            }
+            function login(){
+                x.style.left="2px";
+                y.style.left="450px";
+                z.style.left="0px";
+            }
+        </script>
+
+
+		
+    </body>
+</html>
