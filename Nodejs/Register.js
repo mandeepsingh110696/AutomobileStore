@@ -72,6 +72,35 @@ app.get("/login/", (req, res) => {
   });
 });
 
+app.post("/adminloginn", (req, res, result) => {
+  console.log(`login admin ... `);
+
+  console.log("body", req.body);
+  var query = `SELECT * FROM admin WHERE email ='${req.body.email}'and password='${req.body.password}'`;
+  console.log(query);
+  connection.query(query, (err, result, rows) => {
+    if (result && result.length > 0) {
+      res.json({ message: "admin login successfull", errorcode: "200" });
+    } else {
+      res.json({ message: "Invalid username or password", errorcode: "403" });
+    }
+  });
+});
+
+// Insert a car
+app.post("/AddCar", (req, res) => {
+  console.log(`Inserting car ... `);
+
+  console.log("body", req.body);
+
+  connection.query(
+    `INSERT INTO inventory (brand,model,price,color,year,type,Image) VALUES  ('${req.body.brand}','${req.body.model}','${req.body.price}','${req.body.color}','${req.body.year}','${req.body.type}','${req.body.img}')`,
+    (err, rows) => {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
+});
 
 // Listen
 app.listen(port, () => {

@@ -234,6 +234,168 @@ function loginn() {
 	});
 }
 
+
+
+
+
+function adminLoginn() {
+	$(document).ready(function () {
+
+
+		var _email = document.getElementById("email").value;
+		var _pass = document.getElementById("password").value
+
+		if (_email == "") {
+			document.getElementById('email').innerHTML = alert(" ** Please fill the email id` field");
+			return false;
+		}
+
+		else if (_email.indexOf('@') <= 0) {
+			document.getElementById('email').innerHTML = alert(" ** missing or  Invalid @  Position");
+			return false;
+		}
+
+		else if (_pass == "") {
+			document.getElementById('password').innerHTML = alert(" ** Please fill the password field");
+			return false;
+		}
+		else if ((_pass.length <= 5) || (_pass.length > 20)) {
+			document.getElementById('password').innerHTML = alert(" ** Passwords length must be between  5 and 20");
+			return false;
+		}
+
+
+		else {
+
+			$('#loginclick').click(() => {
+				console.log('login customer');
+
+				const email = $('#email').val();
+				const pass = $('#password').val();
+
+
+				const adminlogin = new AdminLogin(email, pass);
+
+				console.log(adminlogin);
+
+				$.post(url + '/adminloginn', adminlogin, (res) => {
+					console.log("adminLogin ", res)
+					if (res.errorcode == "200") {
+						   alert("admin login successfull");
+							window.location="addcars.html"
+					}
+					else{
+						alert(res.message);
+					}
+				
+
+				});
+			});
+
+		}
+
+
+
+	});
+	
+}
+
+
+	
+	function addCars(){
+		
+		 $(document).ready(function () {
+		var brand=document.getElementById("brand").value;
+		var model=document.getElementById("model").value;
+		var price=document.getElementById("price").value;
+		var color=document.getElementById("color").value;
+		var year=document.getElementById("year").value;
+		var type=document.getElementById("type").value;
+		var img=document.getElementById("img").files[0].mozFullPath;
+		
+		
+		if(brand == ""){
+				document.getElementById('brand').innerHTML =alert(" ** Please fill the brand field");
+				return false;
+			}
+			else if(!isNaN(brand)){
+				document.getElementById('brand').innerHTML =alert(" ** only characters are allowed in brandname field" );
+				return false;
+			} 
+			else if(model == ""){
+				document.getElementById('model').innerHTML =alert(" ** Please fill the model field");
+				return false;
+			}
+			else if(!isNaN(model)){
+				document.getElementById('model').innerHTML =alert(" ** only characters are allowed in model field" );
+				return false;
+			}
+			 
+			 else if(price == ""){
+				document.getElementById('price').innerHTML =alert(" ** Please fill the price field");
+				return false;
+			}
+			else if(color == ""){
+				document.getElementById('color').innerHTML =alert(" ** Please fill the color field");
+				return false;
+			}
+
+	       else if(year== ""){
+				document.getElementById('year').innerHTML =alert(" ** Please fill the year field");
+				return false;
+			}
+			
+				else if(type == ""){
+				document.getElementById('type').innerHTML =alert(" ** Please fill the type field");
+				return false;
+			}
+	
+			else if(img == ""){
+				document.getElementById('img').innerHTML =alert(" ** Please fill the img field");
+				return false;
+			}
+			else{
+				
+				
+					$('#ad').click(() => {
+				console.log('Inserting a car');
+				
+					const brand =  $('#brand').val();
+	                const model =  $('#model').val();
+	                const price =  $('#price').val();
+	                const color =  $('#color').val();
+	                const year =  $('#year').val();
+	                const type =  $('#type').val();
+ 	                
+			
+
+				const addcar = new AddCar(brand ,model,price,color,year,type,imagepath);
+
+				console.log(addcar);
+
+				$.post(url + '/AddCar', addcar, (res) => {
+					console.log("Added", res)
+					alert("Car Added sucessfully");
+				});
+			});
+
+			//window.location="Thankyou.html";
+			//	window.location="Home.html";
+
+
+			return false;
+		
+		
+		
+				
+			}
+			
+		 });
+		
+		
+		
+	}
+	
 		
 		
 		
