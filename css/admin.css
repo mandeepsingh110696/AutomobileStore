@@ -97,6 +97,16 @@ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
 }
+#view{
+  float:right;
+  width:75%;
+  background-image: url("../Images/edit.jpg");
+  height: 600px;
+  background-position: center;
+   color: goldenrod; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
 
 h1{
   text-align: center;
@@ -110,6 +120,10 @@ h1{
 }
 #removecars{
   text-align: center;
+}
+#viewcars{
+  text-align: center;
+
 }
 #form{
   width: 100%;

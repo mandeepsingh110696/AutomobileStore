@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css" type="text/css" />
+    <title>Document</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../javascript/ViewCar.js" ></script>
+	<script src="../javascript/script.js" ></script>
+	
+	
+</head>
+<body>
+   
+  
+    <table border="1px" id="empTable">
+        <tr>
+            <td>
+             
+                <a href="addcars.html">   Add cars</a>
+            </td>
+        </tr>
+        <tr>
+        <td>
+            <a href="editcars.html">   Edit car details</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="removecars.html">   Remove cars</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="viewcars.html">   View cars</a>
+            </td>
+        </tr>
+    </table>
+    <div id="view">
+    <h1>View Cars</h1>
+    <form id="viewcars">
+      <div id="form">  <label>Car Id</label>
+        <input type="text" size="25" id="vid" name="vid"><br><br>
+    </div>
+     <button type="button" id="vcar" name="vcar" onclick="viewCars()">View</button>
+      &nbsp; &nbsp; &nbsp;  &nbsp;<button type="reset">Cancel</button>
+       <br>
+       <br>
+    </form>
+	  <table id="table1" style="background-color:white";>
+        <thead>
+            <tr>
+                <th>Car Id</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price</th>
+				<th>Color</th>
+                <th>Year</th>
+                <th>Type</th>
+                <th>Image</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               
+                
+            </tr>
+
+			 <tr>
+               
+                
+            </tr>
+			
+			
+           
+                
+           
+            
+        </tbody>
+    </table>
+	
+	
+	
+</div>
+<script>
+  function signout(){
+		alert("You have been logout successfuly")
+		window.location="";
+	}
+</script>
+</body>
+</html>

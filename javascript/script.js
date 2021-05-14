@@ -394,11 +394,202 @@ function adminLoginn() {
 		
 		
 		
+
+	}
+
+function editCars(){
+		
+		 $(document).ready(function () {
+		var id = document.getElementById("cid").value;	 
+		var brand=document.getElementById("ebrand").value;
+		var model=document.getElementById("emodel").value;
+		var price=document.getElementById("eprice").value;
+		var color=document.getElementById("ecolor").value;
+		var year=document.getElementById("eyear").value;
+		var type=document.getElementById("etype").value;
+		var img=document.getElementById("eimg").value;
+		
+		
+		if(brand == ""){
+				document.getElementById('ebrand').innerHTML =alert(" ** Please fill the  brand name field");
+				return false;
+			}
+			else if(!isNaN(brand)){
+				document.getElementById('ebrand').innerHTML =alert(" ** only characters are allowed in brandname field" );
+				return false;
+			} 
+			else if(model == ""){
+				document.getElementById('emodel').innerHTML =alert(" ** Please fill the model field");
+				return false;
+			}
+			else if(!isNaN(model)){
+				document.getElementById('emodel').innerHTML =alert(" ** only characters are allowed in model field" );
+				return false;
+			}
+			 
+			 else if(price == ""){
+				document.getElementById('eprice').innerHTML =alert(" ** Please fill the price field");
+				return false;
+			}
+			else if(color == ""){
+				document.getElementById('ecolor').innerHTML =alert(" ** Please fill the color field");
+				return false;
+			}
+
+	       else if(year== ""){
+				document.getElementById('eyear').innerHTML =alert(" ** Please fill the year field");
+				return false;
+			}
+			
+				else if(type == ""){
+				document.getElementById('etype').innerHTML =alert(" ** Please fill the type field");
+				return false;
+			}
+	
+			else if(img == ""){
+				document.getElementById('eimg').innerHTML =alert(" ** Please fill the img field");
+				return false;
+			}
+			else{
+				
+				
+					$('#edt').click(() => {
+				console.log('Edited a car');
+				
+				
+				    const cid =  $('#cid').val();
+					const brand =  $('#ebrand').val();
+	                const model =  $('#emodel').val();
+	                const price =  $('#eprice').val();
+	                const color =  $('#ecolor').val();
+	                const year =  $('#eyear').val();
+	                const type =  $('#etype').val();
+ 	                const img = $('#eimg').val();
+			
+
+				const editcar = new EditCar(cid,brand ,model,price,color,year,type,imagepathh);
+
+				console.log(editcar);
+
+				$.ajax({
+			url: url + `/editCar/${id}`,
+			type: 'PUT',
+			data: editcar,
+			success: (res) => {
+			  console.log('put response', res)
+			  alert("Car updated sucessfully");
+			},
+			error: (err) => {
+				
+				console.log('put error', err)
+			}
+		});
+			});
+
+			//window.location="Thankyou.html";
+			//	window.location="Home.html";
+
+
+			return false;
+				
+			}
+			
+		 });
+		
+	}
+	function deleteCars(){
+		 $(document).ready(function () {
+		
+	// Delete Car
+	$('#iddd').click(() => {
+		console.log('Deleting a car');
+		const id = $('#delid').val();
+
+		$.ajax({
+			url: url + `/deleteCar/${id}`,
+			type: 'DELETE',
+			success: (res) => {
+				alert(res.message);
+			  console.log('delete response', res)
+			},
+			error: (err) => {
+				// alert("Invalid Id");
+			 console.log('delete error', err)
+			}
+			
+		});
+	});
+		 });
 	}
 	
 		
 		
+		function viewCars(){
+		 $(document).ready(function () {
+			// Get All cars by id
+	 $('#vcar').click(() => {
+		const id = $('#vid').val();
+		console.log(`Requesting car with id ${id}`);
+
+		$.get(url + `/viewCar/${id}`, (res) => {
+			// res is an array!
+			
+			if(res.errorcode!="403"){
+				const viewcar = ViewCar.fromRow(res[0]);
+			console.log('data:', viewcar);
+			
+			const InvtId = viewcar.InvtId;
+			
+            const brand = viewcar.brand;
+			
+			 const model = viewcar.model;
+			  const price = viewcar.price;
+			   const color = viewcar.color;
+			    const year = viewcar.year;
+				 const type = viewcar.type;
+				  const Image = viewcar.Image;
+			
+
+
+			
+			
+const table = document.getElementById('table1');
+
+const tbody= table.getElementsByTagName('tbody')[0];
+
+const row = tbody.insertRow(tbody.rows.length);
+
+const viewCars= new ViewCar(InvtId,brand,model,price,color,year,type,Image);
+console.log(viewCars.writeValue());
+const cell1 = row.insertCell(0);
+const cell2 = row.insertCell(1);
+const cell3 = row.insertCell(2);
+const cell4 = row.insertCell(3);
+const cell5 = row.insertCell(4);
+const cell6 = row.insertCell(5);
+const cell7 = row.insertCell(6);
+const cell8 = row.insertCell(7);
+cell1.innerHTML = viewCars.InvtId;
+cell2.innerHTML = viewCars.brand;
+cell3.innerHTML =  viewCars.model;
+cell4.innerHTML = viewCars.price; 
+cell5.innerHTML = viewCars.color;
+cell6.innerHTML = viewCars.year;
+cell7.innerHTML =  viewCars.type;
+cell8.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
+ }
+else{
+	alert(res.message);
+}
+		});	
+		});
+		// alert("Invalid Id");
+	});
+	
+	
+	}
 		
+
 		
 		
 		
