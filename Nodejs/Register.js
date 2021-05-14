@@ -102,6 +102,64 @@ app.post("/AddCar", (req, res) => {
   );
 });
 
+// Update a car
+app.put("/editCar/:id", (req, res) => {
+  console.log("params:", req.params);
+  const id = req.params.id;
+  console.log("body:", req.body);
+
+  connection.query(
+    `UPDATE inventory SET brand = '${req.body.brand}', model = '${req.body.model}',
+      price = '${req.body.price}',color = '${req.body.color}',year = '${req.body.year}',type = '${req.body.type}',Image = '${req.body.img}' ` +
+      `WHERE InvtId = ${id}`,
+    (err, rows) => {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
+});
+
+// Delete a car
+app.delete("/deleteCar/:id", (req, res, result) => {
+  console.log(`Delete car id [${req.params.id}]... `);
+
+  connection.query(
+    `DELETE FROM inventory WHERE InvtId = ${req.params.id}`,
+    (err, result, fields) => {
+      if (err) throw err;
+      console.log(result.affectedRows);
+      if (result.affectedRows) {
+        res.json({ message: "Car Deleted Successfully", errorcode: "200" });
+
+        console.log("Car Deleted Successfully");
+      } else {
+        res.json({ message: "Invalid Inventory Id", errorcode: "403" });
+      }
+    }
+  );
+});
+
+// View Car By Id
+app.get("/viewCar/:id", (req, res) => {
+  console.log("params:", req.params);
+
+  const id = req.params.id;
+  console.log(`Fetching Car with id ${id}...`);
+
+  connection.query(
+    `SELECT * FROM inventory WHERE InvtId = ${id}`,
+    (err, rows) => {
+      if (err) throw err;
+      if (rows.length > 0) {
+        res.json(rows);
+        console.log("Car retreived Successfully");
+      } else {
+        res.json({ message: "Invalid Inventory Id", errorcode: "403" });
+      }
+    }
+  );
+});
+
 // Listen
 app.listen(port, () => {
   console.log(`Student app listening at http://localhost:${port}`);
