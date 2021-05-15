@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>
+          
+
+        </title>
+
+
+        <link rel="stylesheet" href="../css/adminlogin.css" >
+		
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="../javascript/adminlogin.js"></script>
+	    <script src="../javascript/script.js"></script>
+
+
+
+    </head>
+    <body>
+        
+        <div class="hero">
+            <div class="form-box">
+           <div>
+               <div class="logo">
+                   <img src="../Images/goldnewlogo.png" alt="logo"> 
+				   <h2>Automobile</h2><br>
+				   
+				   
+               </div>
+			      
+           </div>
+		           
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn"  onclick="login()">Admin Login</button>
+                </div>
+                <div class="social-icons">
+					<a href="https://www.facebook.com">
+                    <img src="../Images/fb.png" alt="W3Schools.com" >
+                    </a>
+                   <a href="https://www.twitter.com">
+                    <img src="../Images/twit.jpg" alt="twitter" >
+                    </a>
+					<a href="https://www.instagram.com">
+                    <img src="../Images/insta.jpg" alt="instagram" >
+                    </a>
+					<a href="https://www.gmail.com">
+                    <img src="../Images/mail.jpg" alt="gmail" >
+                    </a>
+
+                </div>
+                <div class="input-group" id="Login"  >
+                    <input type="text" id="email" name="ëmail" class="input-field"  placeholder="Email Id"  >
+                    <input type="text" id="password" name="password" class="input-field" placeholder="Password" >
+                    <input type ="checkbox"   class="check-box"><span>Remember Password</span>
+                    <input type="submit"  value="Log in" class="submit-btn" id="loginclick" name="loginclick"onclick="adminLoginn()" >
+					
+				
+                </div>
+              
+            </div>
+            
+        </div>
+       <script>
+            var x= document.getElementById("Login");
+            var y= document.getElementById("Register");
+            var z= document.getElementById("btn");
+            function register(){
+                x.style.left="-400px";
+                y.style.left="2px";
+                z.style.left="110px";
+            }
+            function login(){
+                x.style.left="2px";
+                y.style.left="450px";
+                z.style.left="0px";
+            }
+        </script>
+		
+    </body>
+</html>

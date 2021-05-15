@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="../css/admin.css"type="text/css" />
+    <link rel="stylesheet" href="../css/admin.css" type="text/css" />
     <title>Document</title>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	 <script src="../javascript/script.js" ></script>
+	<script src="../javascript/ViewCar.js" ></script>
+	<script src="../javascript/script.js" ></script>
+	
 	
 </head>
 <body>
-    
-    <hr>
+ 
     <table border="1px" id="empTable">
         <tr>
             <td>
@@ -36,17 +37,52 @@
             </td>
         </tr>
     </table>
-    <div id="remove">
-    <h1>Remove Cars</h1>
-    <form id="removecars">
+    <div id="view">
+    <h1>View Cars</h1>
+    <form id="viewcars">
       <div id="form">  <label>Car Id</label>
-        <input type="text" size="25" id="delid" name="delid" ><br><br>
+        <input type="text" size="25" id="vid" name="vid"><br><br>
     </div>
-     <button type="button"  id="iddd" name="iddd" onclick="deleteCars()">Delete</button>
-      &nbsp; &nbsp; &nbsp;  <button type="reset">Cancel</button>
+     <button type="button"onclick="viewCars()" id="vcar" name="vcar">View</button>
+      &nbsp; &nbsp; &nbsp;  &nbsp;<button type="reset">Cancel</button>
        <br>
        <br>
     </form>
+	  <table id="table1" style="background-color:white";>
+        <thead>
+            <tr>
+                <th>Inventory Id</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price</th>
+				<th>Color</th>
+                <th>Year</th>
+                <th>Type</th>
+                <th>Image</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               
+                
+            </tr>
+
+			 <tr>
+               
+                
+            </tr>
+			
+			
+           
+                
+           
+            
+        </tbody>
+    </table>
+	
+	
+	
 </div>
 <script>
   function signout(){
