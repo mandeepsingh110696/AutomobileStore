@@ -1,3 +1,5 @@
+
+  
 const url = 'http://localhost:3000';
 var imagepath="";
        $(document).ready(function() {
@@ -33,7 +35,6 @@ function validation() {
 		var _email = document.getElementById("ema").value;
 		var _add = document.getElementById("add").value;
 		var _pass = document.getElementById("pass").value;
-		var _cpass = document.getElementById("cpass").value;
 		var _phno = document.getElementById("phno").value;
 	
 
@@ -95,16 +96,6 @@ function validation() {
 		}
 
 
-		else if (_cpass == "") {
-			document.getElementById('cpass').innerHTML = alert(" ** Please fill the confirmpassword field");
-			return false;
-		}
-
-		else if (_pass != _cpass) {
-			document.getElementById('cpass').innerHTML = alert(" ** Password does not match the confirm password");
-			return false;
-		}
-
 		else if (_phno == "") {
 			document.getElementById('phno').innerHTML = alert(" ** Please fill the Phone Number field");
 			return false;
@@ -120,14 +111,13 @@ function validation() {
 			var _email = document.getElementById("ema").value;
 			var _add = document.getElementById("add").value;
 			var _pass = document.getElementById("pass").value;
-			var _cpass = document.getElementById("cpass").value;
+
 			var _phno = document.getElementById("phno").value;
 			
 
 			localStorage.setItem("fname", _fname);
 			localStorage.setItem("lname", _lname);
 			localStorage.setItem("pass", _pass);
-			localStorage.setItem("cpass", _cpass);
 			localStorage.setItem("email", _email);
 			localStorage.setItem("phno", _phno);
 			localStorage.setItem("address", _add);
@@ -146,10 +136,9 @@ function validation() {
 				const lname = $('#lname').val();
 				const add = $('#add').val();
 				const pass = $('#pass').val();
-				const cpass = $('#cpass').val();
 				const phno = $('#phno').val();
 
-				const register = new Register(emal, fname, lname, add, pass, cpass, phno);
+				const register = new Register(emal, fname, lname, add, pass,phno);
 
 				console.log(register);
 
@@ -588,12 +577,14 @@ else{
 	
 	
 	}
+
+
+
 		
 
 		
 		
 		
 
-		
 		
 		

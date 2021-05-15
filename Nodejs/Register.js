@@ -161,6 +161,24 @@ app.get("/viewCar/:id", (req, res) => {
   );
 });
 
+
+// Get All cars with filter
+app.get("/viewAllCars/:filter", (req, res) => {
+  var sql = "";
+  console.log("Fetching all cars...");
+  var filter = req.params.filter;
+  console.log(req.params);
+  if (filter == "all") {
+    sql = "SELECT * FROM inventory ";
+  } else {
+    sql = "SELECT * FROM inventory where type='" + filter + "'";
+  }
+  connection.query(sql, (err, rows) => {
+    if (err) throw err;
+    console.log("rows", rows);
+    res.json(rows);
+  });
+});
 // Listen
 app.listen(port, () => {
   console.log(`Student app listening at http://localhost:${port}`);
