@@ -24,7 +24,7 @@ app.post("/register", (req, res) => {
   console.log("body", req.body);
 
   connection.query(
-    `INSERT INTO register (email,fname,lname,pass,cpass,address,phno) VALUES  ('${req.body.email}','${req.body.fname}','${req.body.lname}','${req.body.pass}','${req.body.cpass}','${req.body.address}','${req.body.phno}')`,
+    `INSERT INTO register (email,fname,lname,pass,address,phno) VALUES  ('${req.body.email}','${req.body.fname}','${req.body.lname}','${req.body.pass}','${req.body.address}','${req.body.phno}')`,
     (err, rows) => {
       if (err) {
         res.json({ message: "User Already exist", errorcode: "403" });
@@ -160,7 +160,6 @@ app.get("/viewCar/:id", (req, res) => {
     }
   );
 });
-
 
 // Get All cars with filter
 app.get("/viewAllCars/:filter", (req, res) => {
