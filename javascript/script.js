@@ -577,6 +577,121 @@ else{
 	
 	
 	}
+
+
+
+	function viewCarss(){
+		 $(document).ready(function () {
+		
+	 
+	
+		console.log('Getting all customers')
+		$.get('http://localhost:3000/viewAllCars/all', (res) => {
+			console.log('data:', res);
+		    for(const customers in res){
+			const viewcar = ViewCarss.fromRow(res[customers]);
+			console.log('data:', viewcar);
+			
+			const InvtId = viewcar.InvtId;
+			
+            const brand = viewcar.brand;
+			
+			 const model = viewcar.model;
+			  const price = viewcar.price;
+			   const color = viewcar.color;
+			    const year = viewcar.year;
+				 const type = viewcar.type;
+				  const Image = viewcar.Image;
+			
+
+
+			
+			
+const table = document.getElementById('table1');
+
+const tbody= table.getElementsByTagName('tbody')[0];
+
+const row = tbody.insertRow(tbody.rows.length);
+
+const viewCars= new ViewCarss(InvtId,brand,model,price,color,year,type,Image);
+console.log(viewCars.writeValue());
+const cell1 = row.insertCell(0);
+const cell2 = row.insertCell(1);
+const cell3 = row.insertCell(2);
+const cell4 = row.insertCell(3);
+const cell5 = row.insertCell(4);
+const cell6 = row.insertCell(5);
+const cell7 = row.insertCell(6);
+const cell8 = row.insertCell(7);
+const cell9 = row.insertCell(8);
+const cell10 = row.insertCell(9);
+cell1.innerHTML = viewCars.InvtId;
+cell2.innerHTML = viewCars.brand;
+cell3.innerHTML =  viewCars.model;
+cell4.innerHTML = viewCars.price; 
+cell5.innerHTML = viewCars.color;
+cell6.innerHTML = viewCars.year;
+cell7.innerHTML =  viewCars.type;
+cell8.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
+cell9.innerHTML = "<button type='button' onclick=\"editCarNew(\'" + InvtId + "\',\'" + brand + "\',\'" + model + "\',\'" + price + "\',\'" + color + "\',\'" + year + "\',\'" + type + "\')\">Edit</button>";
+cell10.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId + "\')\">Delete</button>";
+			}
+
+			
+			
+		});
+	});
+	
+	
+	
+	}
+	
+	
+	
+	
+	function deleteCarNew(id){
+		console.log('Deleting a car');
+
+		$.ajax({
+			url: url + `/deleteCar/${id}`,
+			type: 'DELETE',
+			success: (res) => {
+				alert(res.message);
+				location.reload();
+			  console.log('delete response', res)
+			},
+			error: (err) => {
+				// alert("Invalid Id");
+			 console.log('delete error', err)
+			}
+			
+		});
+		
+	}
+	
+	function editCarNew(id,brand, model,price,color,year,type){
+		localStorage.setItem("selected_cars_id",id);
+		localStorage.setItem("brandedit",brand);
+		localStorage.setItem("brandmodel",model);
+		localStorage.setItem("brandprice",price);
+		localStorage.setItem("brandcolor",color);
+		localStorage.setItem("brandyear",year);
+		localStorage.setItem("brandtype",type);
+		window.location="editcars.html";
+		
+		
+	}
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
 		
 
 		
