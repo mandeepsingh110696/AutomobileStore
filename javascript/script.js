@@ -580,6 +580,285 @@ else{
 
 
 
+
+
+		function testDrive(opt){
+			if(opt==1){
+		   testdrive1(opt);	
+		   
+		}
+		if(opt==2){
+			testdrive2(opt);	
+		}
+		
+		if(opt==3){
+			testdrive3(opt);
+		}
+		
+		if(opt==4){
+			testdrive4(opt);
+		}
+		
+		if(opt==5){
+			testdrive5(opt);
+		}
+		
+		if(opt==6){
+			testdrive6(opt);
+		}
+		
+		if(opt==7){
+			testdrive7(opt);
+		}
+		
+		if(opt==8){
+			testdrive8(opt);
+		}
+		
+		
+			window.location="testdrive.html";
+		}
+		
+		
+		
+		function testdrive1(opt){
+		debugger
+		var carcode=document.getElementById("carcode1").innerHTML;
+		var brand=document.getElementById("brand1").innerHTML;
+		var model=document.getElementById("model1").innerHTML;
+		var price=document.getElementById("price1").innerHTML;
+		var color=document.getElementById("color1").innerHTML;
+		var year=document.getElementById("year1").innerHTML;
+		var type=document.getElementById("type1").innerHTML;
+		
+		 var email =localStorage.getItem("email_login");
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand1",brand);
+		localStorage.setItem("model1",model);
+		localStorage.setItem("price1",price);
+		localStorage.setItem("color1",color);
+		localStorage.setItem("year1",year);
+		localStorage.setItem("type1",type);
+		localStorage.setItem("opt",opt);
+		localStorage.setItem("email_login",email);
+		
+		
+		
+		window.location="testdrive.html";
+		
+		return false;
+	}
+		
+		
+		
+		function testdrive2(opt){
+		
+		
+		debugger
+		var carcode=document.getElementById("carcode2").innerHTML;
+		var brand2=document.getElementById("brand2").innerHTML;
+		var model2=document.getElementById("model2").innerHTML;
+		var price2=document.getElementById("price2").innerHTML;
+		var color2=document.getElementById("color2").innerHTML;
+		var year2=document.getElementById("year2").innerHTML;
+		var type2=document.getElementById("type2").innerHTML;
+		
+		
+		 var email =localStorage.getItem("email_login");
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand2",brand2);
+		localStorage.setItem("model2",model2);
+		localStorage.setItem("price2",price2);
+		localStorage.setItem("color2",color2);
+		localStorage.setItem("year2",year2);
+		localStorage.setItem("type2",type2);
+		localStorage.setItem("opt",opt);
+			localStorage.setItem("email_login",email);
+			window.location="testdrive.html";
+		
+		return false;
+	}
+		
+		
+		
+		function testdrive3(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode3").innerHTML;
+		var brand3=document.getElementById("brand3").innerHTML;
+		var model3=document.getElementById("model3").innerHTML;
+		var price3=document.getElementById("price3").innerHTML;
+		var color3=document.getElementById("color3").innerHTML;
+		var year3=document.getElementById("year3").innerHTML;
+		var type3=document.getElementById("type3").innerHTML;
+		 var email =localStorage.getItem("email_login");
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand3",brand3);
+		localStorage.setItem("model3",model3);
+		localStorage.setItem("price3",price3);
+		localStorage.setItem("color3",color3);
+		localStorage.setItem("year3",year3);
+		localStorage.setItem("type3",type3);
+		localStorage.setItem("opt",opt);
+		localStorage.setItem("email_login",email);
+			window.location="testdrive.html";
+		
+		return false;
+	}
+	
+	function testdrive4(opt){
+		
+		
+			debugger
+				var carcode=document.getElementById("carcode4").innerHTML;
+		var brand4=document.getElementById("brand4").innerHTML;
+		var model4=document.getElementById("model4").innerHTML;
+		var price4=document.getElementById("price4").innerHTML;
+		var color4=document.getElementById("color4").innerHTML;
+		var year4=document.getElementById("year4").innerHTML;
+		var type4=document.getElementById("type4").innerHTML;
+		 var email =localStorage.getItem("email_login");
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand4",brand4);
+		localStorage.setItem("model4",model4);
+		localStorage.setItem("price4",price4);
+		localStorage.setItem("color4",color4);
+		localStorage.setItem("year4",year4);
+		localStorage.setItem("type4",type4);
+		localStorage.setItem("opt",opt);
+		localStorage.setItem("email_login",email);
+		window.location="testdrive.html";
+		
+		return false;
+	}
+	
+	function testdrive5(opt){
+		
+		
+		debugger
+			var carcode=document.getElementById("carcode5").innerHTML;
+		var brand5=document.getElementById("brand5").innerHTML;
+		var model5=document.getElementById("model5").innerHTML;
+		var price5=document.getElementById("price5").innerHTML;
+		var color5=document.getElementById("color5").innerHTML;
+		var year5=document.getElementById("year5").innerHTML;
+		var type5=document.getElementById("type5").innerHTML;
+		 var email =localStorage.getItem("email_login");
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand5",brand5);
+		localStorage.setItem("model5",model5);
+		localStorage.setItem("price5",price5);
+		localStorage.setItem("color5",color5);
+		localStorage.setItem("year5",year5);
+		localStorage.setItem("type5",type5);
+		localStorage.setItem("opt",opt);
+		localStorage.setItem("email_login",email);
+			window.location="testdrive.html";
+		
+		return false;
+	}
+	function testdrive6(opt){
+		
+		
+		debugger
+			var carcode=document.getElementById("carcode6").innerHTML;
+		var brand6=document.getElementById("brand6").innerHTML;
+		var model6=document.getElementById("model6").innerHTML;
+		var price6=document.getElementById("price6").innerHTML;
+		var color6=document.getElementById("color6").innerHTML;
+		var year6=document.getElementById("year6").innerHTML;
+		var type6=document.getElementById("type6").innerHTML;
+		 var email =localStorage.getItem("email_login");
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand6",brand6);
+		localStorage.setItem("model6",model6);
+		localStorage.setItem("price6",price6);
+		localStorage.setItem("color6",color6);
+		localStorage.setItem("year6",year6);
+		localStorage.setItem("type6",type6);
+		localStorage.setItem("opt",opt);
+		localStorage.setItem("email_login",email);
+			window.location="testdrive.html";
+		
+		return false;
+	}
+	
+	function testdrive7(opt){
+		
+		
+			debugger
+				var carcode=document.getElementById("carcode7").innerHTML;
+		var brand7=document.getElementById("brand7").innerHTML;
+		var model7=document.getElementById("model7").innerHTML;
+		var price7=document.getElementById("price7").innerHTML;
+		var color7=document.getElementById("color7").innerHTML;
+		var year7=document.getElementById("year7").innerHTML;
+		var type7=document.getElementById("type7").innerHTML;
+		 var email =localStorage.getItem("email_login");
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand7",brand7);
+		localStorage.setItem("model7",model7);
+		localStorage.setItem("price7",price7);
+		localStorage.setItem("color7",color7);
+		localStorage.setItem("year7",year7);
+		localStorage.setItem("type7",type7);
+		localStorage.setItem("opt",opt);
+		localStorage.setItem("email_login",email);
+			window.location="testdrive.html";
+		
+		return false;
+	}
+	
+	function testdrive8(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode8").innerHTML;
+		var brand8=document.getElementById("brand8").innerHTML;
+		var model8=document.getElementById("model8").innerHTML;
+		var price8=document.getElementById("price8").innerHTML;
+		var color8=document.getElementById("color8").innerHTML;
+		var year8=document.getElementById("year8").innerHTML;
+		var type8=document.getElementById("type8").innerHTML;
+		 var email =localStorage.getItem("email_login");
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand8",brand8);
+		localStorage.setItem("model8",model8);
+		localStorage.setItem("price8",price8);
+		localStorage.setItem("color8",color8);
+		localStorage.setItem("year8",year8);
+		localStorage.setItem("type8",type8);
+		localStorage.setItem("opt8",opt);
+		localStorage.setItem("email_login",email);
+			window.location="testdrive.html";
+		
+		return false;
+	}
+
+
+
+
+
+
+
+
+
+
+
 	function viewCarss(){
 		 $(document).ready(function () {
 		
@@ -645,6 +924,13 @@ cell10.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId 
 	
 	
 	}
+
+
+
+
+
+
+
 	
 	
 	
