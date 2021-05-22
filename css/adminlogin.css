@@ -15,7 +15,7 @@
 }
 .form-box{
     width: 380px;
-    height: 560px;
+    height: 550px;
     position: relative;
     margin: 6% auto;
     background: rgb(8, 8, 8);
@@ -50,6 +50,8 @@ h2{
     cursor: pointer;
     background: transparent;
     border:0;
+	text-align:center;
+	margin-left:50px;
     outline: none;
     position: relative;
     color: gold;
@@ -61,7 +63,7 @@ h2{
     left: 0;
     right: 0;
     position: absolute;
-    width: 50%;
+    width: 90%;
     height: 100%;
     background: grey;
     border-radius: 30px;
@@ -70,11 +72,10 @@ h2{
 .social-icons{
     width: 30px auto;
     text-align: center;
-
 }
 .social-icons img{
     width: 30px;
-    margin: 0 12px ;
+    margin: 0 12px;
     box-shadow: 0 0 20px 0 ;
     cursor: pointer;
     border-radius: 50%;

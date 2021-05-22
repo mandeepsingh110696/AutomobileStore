@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="../css/admin.css"type="text/css" />
+    <title>Document</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 <script src="../javascript/script.js" ></script>
+	
+</head>
+<body>
+    
+    <hr>
+    <table border="1px" id="empTable">
+        <tr>
+            <td>
+             
+                <a href="addcars.html">   Add cars</a>
+            </td>
+        </tr>
+        <tr>
+        <td>
+            <a href="editcars.html">   Edit car details</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="removecars.html">   Remove cars</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="viewcars.html">   View cars</a>
+            </td>
+        </tr>
+    </table>
+    <div id="remove">
+    <h1>Remove Cars</h1>
+    <form id="removecars">
+      <div id="form">  <label>Car Id</label>
+        <input type="text" size="25" id="delid" name="delid" ><br><br>
+    </div>
+     <button type="button"  id="iddd" name="iddd" onclick="deleteCars()">Delete</button>
+      &nbsp; &nbsp; &nbsp;  <button type="reset">Cancel</button>
+       <br>
+       <br>
+    </form>
+</div>
+<script>
+  function signout(){
+		alert("You have been logout successfuly")
+		window.location="";
+	}
+</script>
+</body>
+</html>

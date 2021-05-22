@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="../css/admin.css" type="text/css" />
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../javascript/EditCar.js"></script>
+	 <script src="../javascript/script.js  " ></script>
+	
+    <title>Document</title>
+</head>
+<body>
+    
+    <hr>
+    <table border="1px" id="empTable">
+        <tr>
+            <td>
+             
+                <a href="addcars.html">   Add cars</a>
+            </td>
+        </tr>
+        <tr>
+        <td>
+            <a href="editcars.html">   Edit car details</a>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>
+                <a href="viewcarss.html">   View cars</a>
+            </td>
+        </tr>
+    </table>
+    <div id="edit">
+    <h1>Edit Car Details</h1>
+    <form id="editcars">
+	
+	 <div id="form"><label>Car Id</label>
+        <input type="text" size="25" id="cid" name="cid"><br><br>
+    </div>
+      <div id="form">  <label>Brand Name</label>
+        <input type="text" size="25" id="ebrand" name="ebrand"><br><br>
+    </div>
+  <div id="form">
+        <label>Model</label>
+        <input type="text" size="25"  id="emodel" name="emodel"><br><br>
+        </div>
+        <div id="form">
+        <label>Price</label>
+        <input type="text"size="25"  id="eprice" name="eprice"><br><br>
+        </div>
+        <div id="form">
+        <label>Color</label>
+        <input type="text" size="25"  id="ecolor" name="ecolor"><br><br>
+        </div>
+        <div id="form">
+        <label>Year</label>
+        <input type="text"size="25"  id="eyear" name="eyear"><br><br>
+        </div>
+        <div id="form">
+        <label>Type</label>
+        <input type="text"size="25"  id="etype" name="etype"><br><br>
+        </div>
+        <div id="form">
+        <label>Image</label>
+        <input type="file" size="25"  id="eimg" name="eimg"><br><br>
+        </div>
+        <button type="button"   id="edt" name="edt" onclick="editCars()" >Update</button>
+      &nbsp; &nbsp; &nbsp;  <button type="reset">Cancel</button>
+       <br>
+       <br>
+    </form>
+</div>
+
+
+<script>
+  function signout(){
+		alert("You have been logout successfuly")
+		window.location="";
+	}
+	document.getElementById("cid").value=localStorage.getItem("selected_cars_id");
+	document.getElementById("ebrand").value=localStorage.getItem("brandedit");
+	document.getElementById("emodel").value=localStorage.getItem("brandmodel");
+	document.getElementById("eprice").value=localStorage.getItem("brandprice");
+	document.getElementById("ecolor").value=localStorage.getItem("brandcolor");
+	document.getElementById("eyear").value=localStorage.getItem("brandyear");
+	document.getElementById("etype").value=localStorage.getItem("brandtype");
+</script>
+</body>
+</html>

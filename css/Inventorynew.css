@@ -1,0 +1,215 @@
+/* to style the body part */
+
+body {
+  background: linear-gradient(55deg, #4b5153 -50%, #1f1d1d 50%, #000000 10%);
+  
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+/* this is to style the navigation */
+
+.nav {
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+
+.nav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 36px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav-right{
+	
+float:right;
+}
+
+/* Change the color of links on hover */
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+
+.nav a:active {
+  background-color: black;
+  font-style: initial;
+  color: white;
+}
+
+button{
+  margin-bottom: 25px;
+  border-radius: 10px;
+  height: 30px;
+  width: 120px;
+  background-color: goldenrod;
+  margin-top: 10px;
+}
+button:hover{
+  background-color: black;
+  color: goldenrod;
+}
+
+label {
+  padding: 12px 6px 15px 0;
+  display: inline-block;
+  color: goldenrod;
+  width: 100%;
+  
+}
+.form{
+  float: right;
+  width: 40%;
+  margin-top: 0%;
+}
+.form1{
+  float: right;
+  width: 40%;
+  margin-top: 40px;
+}
+.form2{
+  float: right;
+  width: 40%;
+  margin-top: 40px;
+}
+.form3{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form4{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form5{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form6{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form7{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form8{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form9{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form10{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+.form11{
+  float: right;
+  width: 40%;
+  margin-top: 45px;
+}
+
+.image{
+  float: left;
+  width: 50%;
+  padding: 0%;
+  margin-left: 10%;
+  margin-top:30px;
+}
+.image1{
+  float: left;
+  width: 50%;
+  padding: 0%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.buy{
+  float: right;
+  margin-right: 40%;
+}
+.test{
+  float: left;
+}
+img{
+  border-radius: 3%;
+  }
+/* alignment of label and input types */
+.col-label {
+  float: left;
+  width: 20%;
+  margin-top: 0px;
+}
+
+.col-input {
+  float: left;
+  width: 30%;
+  margin-top: 0px;
+  padding: 0%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer{
+
+  background-image: url(../Images/image1.png);
+  width: 100%;
+ padding: 0;
+ height: 200px;
+ margin-top: 395%;
+ background-repeat: no-repeat;
+ background-position: right;
+ margin-bottom: 0;
+ }
+p{
+  font-size: larger;
+  font-weight: bolder;
+  color: #000000;
+  padding-top: 25px;
+
+}
+.social-icons{
+  clear: both;
+  width: 50px auto;
+  text-align: center;
+
+}
+.social-icons img{
+  width: 30px;
+  margin: 0 10px 0 10px ;
+  box-shadow: goldenrod 0 0 20px ;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.top{
+  margin-top: 40px;
+  margin-right: 150px;
+  float: right;
+  border-radius: 15px;
+  height: 30px;
+  width: 120px;
+  background-color: black;
+  color: goldenrod;
+  font-weight: 800;
+}
