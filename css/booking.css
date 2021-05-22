@@ -100,7 +100,7 @@ form  .inner{
 	 margin:8px;
 	 margin-right:5px;
 	 margin-left:-1px;
-	 background:linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+	 background:goldenrod;
  
 }
 form .btn:hover .inner{
