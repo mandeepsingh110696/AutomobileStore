@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/viewcarss.css" type="text/css" />
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 	<script src="../javascript/ViewCarss.js" ></script>
+		<script src="../javascript/script.js" ></script>
+	
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <table>
+            <!-- Here we define the row element for navbar -->
+            <tr>
+                <!-- Here we define the column element for logo -->
+                <td>
+
+                    <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+                    <h2> <img src="../Images/goldnewlogo.png" class="cover"> </h2>
+                </td>
+                <!-- Here we define the column element for hyperlinks for other pages -->
+                <td> 
+                    <!-- Here are the hyperlinks using anchor tag -->
+                   <a href="addcars.html">Inventory Management</a>
+                    <a href="viewcarss.html">View Cars</a>
+							
+ 
+					
+                </td>
+				 <div  class="nav-right">
+					 <a href="javascript:signout();" >signout</a>
+					</div>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div id="img">
+        <table border="1px" style="border-collapse: collapse;border:1px solid goldenrod" class="customer" id="table1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Brand</th>
+                <th>Model</th>
+				<th>Price</th>
+				<th>Color</th>
+				<th>Year</th>
+				<th>Type</th>
+				<th>Image</th>
+				<th>Edit</th>
+				<th>Delete</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               
+                
+            </tr>
+
+			 <tr>
+               
+                
+            </tr>
+			
+			
+           
+                
+           
+            
+        </tbody>
+</table>
+<br>
+<br>
+ 
+</div>
+<script>
+window.onload = function() {
+  viewCarss();
+};
+  function signout(){
+		alert("You have been logout successfuly")
+		window.location="EmpLogin.html"
+	}
+</script>
+
+</body>
+</html>
