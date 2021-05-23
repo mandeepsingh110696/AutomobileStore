@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/exchange.css" type="text/css" />
+	<script src="../javascript/script.js"></script>
+    <script src="../javascript/Exchange.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Exchange</title>
+</head>
+
+<body>
+    <!-- this div tag is used for navigation bar and for logo-->
+    <div class="nav">
+        <table>
+            <!-- Here we define the row element for navbar -->
+            <tr>
+                <!-- Here we define the column element for logo -->
+                <td>
+
+                    <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+                    <h2> <img src="../Images/goldnewlogo.png" class="cover"> </h2>
+                </td>
+                <!-- Here we define the column element for hyperlinks for other pages -->
+                <td>
+                    <!-- Here are the hyperlinks using anchor tag -->
+                    <a class="active" href="page1.html">Home</a>
+                    <a href="page2.html">Cars </a>
+                    <a href="page3.html">Car Details</a>
+                    <a href="page4.html">About Us</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="background">
+	 <label id="carcode"  style="display:none;">Expiry Date</label>
+					   <label id="brand" style="display:none;">Expiry Date</label>
+					   <label id="model"  style="display:none;">Expiry Date</label>
+					   
+					  
+					   	   <h1 id="price" style="color:white;text-align:center;display:none;">Expiry Date</h1>
+						   
+		              <label id="color"  style="display:none;">Expiry Date</label>
+					   <label id="year"  style="display:none;">Expiry Date</label>
+					      <label id="type"  style="display:none;">Expiry Date</label>
+		
+
+        <div class="title">
+		
+
+            <h1>Exchange Car</h1>
+        </div>
+        
+            <div class="container">
+                
+                <div class="row">
+                  <div class="col-label">
+                    <label >Brand Name</label>
+                  </div>
+                  <div class="col-input">
+                    <input type="text"  id="BrandName" name="BrandName" placeholder="Enter the brand name of a car"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-label">
+                    <label>Model</label>
+                  </div>
+                  <div class="col-input">
+                    <input type="text"  id="Model" name="Model" placeholder="Enter the model name of a car"/>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-label">
+                      <label>Color</label>
+                    </div>
+                    <div class="col-input">
+                      <input type="text" id="Color" name="Color" placeholder="Enter the color of a car"/>
+                    </div>
+                  </div>
+                <div class="row">
+                  <div class="col-label">
+                    <label>Car Description</label>
+                  </div>
+                  <div class="col-input">
+                    <textarea  id="Description"  name="Description" placeholder="Write about your cars condition" style="height:100px"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-label">
+                      <label id="">Current Owner</label>
+                    </div>
+                    <div class="col-input">
+                      <input type="text"  id="currentOwner" name="currentOwner" placeholder="Enter the name of a current Owner"/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-label">
+                      <label id="brand">Estimated Price</label>
+                    </div>
+                    <div class="col-input">
+                      <input type="number"  id="EstimatedPrice" name="EstimatedPrice" placeholder="Enter the estimated price of a car"/>
+                    </div>
+                  </div>
+				  
+				
+              
+               
+                </form>
+				  <div class="row">
+                  <input type="button" value="Submit" id="exchange" name="exchange" onclick="exchange()"/> 
+				    
+                  <!-- <input type="button" value="Cancel"/> -->
+                </div>
+              </div>
+              
+        </div>
+    
+</body>
+<script>
+
+
+ 
+
+
+	 
+
+
+ 
+ document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	document.getElementById("brand").innerHTML=localStorage.getItem("brand");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type");
+	
+
+	 
+	
+	
+   </script>
+
+</html>

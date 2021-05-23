@@ -167,7 +167,7 @@ function signout(){
 			
 			var html="";
 			res.forEach(function(arr,index){
-			    html=html+getCarModel(index+1,arr.InvtId,arr.brand,arr.model,arr.price,arr.color,arr.year,arr.type,arr.Image);
+			    html=html+getCarModel(index+1,arr.InvtId,arr.brand,arr.model,arr.price,arr.color,arr.year,arr.type,arr.description,arr.Image);
 				
 			});
 			console.log(html);
@@ -179,7 +179,7 @@ function signout(){
 	viewAllCars("All");
 	
 
-	function getCarModel(index,carcode,brand,model,price,color,year,type,image)
+	function getCarModel(index,carcode,brand,model,price,color,year,type,description,image)
 	    {
 		
 		
@@ -253,7 +253,7 @@ function signout(){
                 <label>Description:</label>
               </div>
               <div class="col-input">
-                <label>the car is smooth to drive</label>
+                <label id="desc${index}" name="desc${index}" >${description}</label>
               </div>
             </div>    
             <div class="row">

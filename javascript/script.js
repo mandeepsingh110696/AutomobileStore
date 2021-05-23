@@ -300,6 +300,7 @@ function adminLoginn() {
 		var color=document.getElementById("color").value;
 		var year=document.getElementById("year").value;
 		var type=document.getElementById("type").value;
+		var desc=document.getElementById("desc").value;
 		var img=document.getElementById("img").files[0].mozFullPath;
 		
 		
@@ -338,9 +339,13 @@ function adminLoginn() {
 				document.getElementById('type').innerHTML =alert(" ** Please fill the type field");
 				return false;
 			}
+			else if(desc == ""){
+				document.getElementById('desc').innerHTML =alert(" ** Please fill the description field");
+				return false;
+			}
 	
 			else if(img == ""){
-				document.getElementById('img').innerHTML =alert(" ** Please fill the img field");
+				document.getElementById('img').innerHTML =alert(" ** Please select the image");
 				return false;
 			}
 			else{
@@ -355,10 +360,11 @@ function adminLoginn() {
 	                const color =  $('#color').val();
 	                const year =  $('#year').val();
 	                const type =  $('#type').val();
+					const desc =  $('#desc').val();
  	                
 			
 
-				const addcar = new AddCar(brand ,model,price,color,year,type,imagepath);
+				const addcar = new AddCar(brand ,model,price,color,year,type,desc,imagepath);
 
 				console.log(addcar);
 
@@ -396,6 +402,7 @@ function editCars(){
 		var color=document.getElementById("ecolor").value;
 		var year=document.getElementById("eyear").value;
 		var type=document.getElementById("etype").value;
+		var type=document.getElementById("edesc").value;
 		var img=document.getElementById("eimg").value;
 		
 		
@@ -453,10 +460,11 @@ function editCars(){
 	                const color =  $('#ecolor').val();
 	                const year =  $('#eyear').val();
 	                const type =  $('#etype').val();
+					const desc =  $('#edesc').val();
  	                const img = $('#eimg').val();
 			
 
-				const editcar = new EditCar(cid,brand ,model,price,color,year,type,imagepathh);
+				const editcar = new EditCar(cid,brand ,model,price,color,year,type,desc,imagepathh);
 
 				console.log(editcar);
 
@@ -536,6 +544,7 @@ function editCars(){
 			   const color = viewcar.color;
 			    const year = viewcar.year;
 				 const type = viewcar.type;
+				  const desc = viewcar.desc;
 				  const Image = viewcar.Image;
 			
 
@@ -548,7 +557,7 @@ const tbody= table.getElementsByTagName('tbody')[0];
 
 const row = tbody.insertRow(tbody.rows.length);
 
-const viewCars= new ViewCar(InvtId,brand,model,price,color,year,type,Image);
+const viewCars= new ViewCar(InvtId,brand,model,price,color,year,type,desc,Image);
 console.log(viewCars.writeValue());
 const cell1 = row.insertCell(0);
 const cell2 = row.insertCell(1);
@@ -558,6 +567,7 @@ const cell5 = row.insertCell(4);
 const cell6 = row.insertCell(5);
 const cell7 = row.insertCell(6);
 const cell8 = row.insertCell(7);
+const cell9 = row.insertCell(8);
 cell1.innerHTML = viewCars.InvtId;
 cell2.innerHTML = viewCars.brand;
 cell3.innerHTML =  viewCars.model;
@@ -565,7 +575,8 @@ cell4.innerHTML = viewCars.price;
 cell5.innerHTML = viewCars.color;
 cell6.innerHTML = viewCars.year;
 cell7.innerHTML =  viewCars.type;
-cell8.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
+cell8.innerHTML =  viewCars.desc;
+cell9.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
  }
 else{
 	alert(res.message);
@@ -630,6 +641,7 @@ else{
 		var color=document.getElementById("color1").innerHTML;
 		var year=document.getElementById("year1").innerHTML;
 		var type=document.getElementById("type1").innerHTML;
+		var desc=document.getElementById("desc1").innerHTML;
 		
 		 var email =localStorage.getItem("email_login");
 		
@@ -641,6 +653,7 @@ else{
 		localStorage.setItem("color1",color);
 		localStorage.setItem("year1",year);
 		localStorage.setItem("type1",type);
+		localStorage.setItem("desc1",desc);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
 		
@@ -664,6 +677,7 @@ else{
 		var color2=document.getElementById("color2").innerHTML;
 		var year2=document.getElementById("year2").innerHTML;
 		var type2=document.getElementById("type2").innerHTML;
+		var desc2=document.getElementById("desc2").innerHTML;
 		
 		
 		 var email =localStorage.getItem("email_login");
@@ -675,6 +689,7 @@ else{
 		localStorage.setItem("color2",color2);
 		localStorage.setItem("year2",year2);
 		localStorage.setItem("type2",type2);
+		localStorage.setItem("desc2",desc2);
 		localStorage.setItem("opt",opt);
 			localStorage.setItem("email_login",email);
 			window.location="testdrive.html";
@@ -694,6 +709,7 @@ else{
 		var color3=document.getElementById("color3").innerHTML;
 		var year3=document.getElementById("year3").innerHTML;
 		var type3=document.getElementById("type3").innerHTML;
+		var desc3=document.getElementById("desc3").innerHTML;
 		 var email =localStorage.getItem("email_login");
 		
 		debugger
@@ -704,6 +720,7 @@ else{
 		localStorage.setItem("color3",color3);
 		localStorage.setItem("year3",year3);
 		localStorage.setItem("type3",type3);
+		localStorage.setItem("desc3",desc3);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
 			window.location="testdrive.html";
@@ -722,6 +739,7 @@ else{
 		var color4=document.getElementById("color4").innerHTML;
 		var year4=document.getElementById("year4").innerHTML;
 		var type4=document.getElementById("type4").innerHTML;
+		var desc4=document.getElementById("desc4").innerHTML;
 		 var email =localStorage.getItem("email_login");
 		
 		debugger
@@ -732,6 +750,7 @@ else{
 		localStorage.setItem("color4",color4);
 		localStorage.setItem("year4",year4);
 		localStorage.setItem("type4",type4);
+		localStorage.setItem("desc4",desc4);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
 		window.location="testdrive.html";
@@ -750,6 +769,7 @@ else{
 		var color5=document.getElementById("color5").innerHTML;
 		var year5=document.getElementById("year5").innerHTML;
 		var type5=document.getElementById("type5").innerHTML;
+		var type5=document.getElementById("type5").innerHTML;
 		 var email =localStorage.getItem("email_login");
 		
 		debugger
@@ -760,6 +780,7 @@ else{
 		localStorage.setItem("color5",color5);
 		localStorage.setItem("year5",year5);
 		localStorage.setItem("type5",type5);
+		localStorage.setItem("desc5",desc5);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
 			window.location="testdrive.html";
@@ -777,6 +798,7 @@ else{
 		var color6=document.getElementById("color6").innerHTML;
 		var year6=document.getElementById("year6").innerHTML;
 		var type6=document.getElementById("type6").innerHTML;
+		var desc6=document.getElementById("desc6").innerHTML;
 		 var email =localStorage.getItem("email_login");
 		
 		debugger
@@ -787,6 +809,7 @@ else{
 		localStorage.setItem("color6",color6);
 		localStorage.setItem("year6",year6);
 		localStorage.setItem("type6",type6);
+		localStorage.setItem("desc6",desc6);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
 			window.location="testdrive.html";
@@ -805,6 +828,7 @@ else{
 		var color7=document.getElementById("color7").innerHTML;
 		var year7=document.getElementById("year7").innerHTML;
 		var type7=document.getElementById("type7").innerHTML;
+		var desc7=document.getElementById("desc7").innerHTML;
 		 var email =localStorage.getItem("email_login");
 		
 		debugger
@@ -815,6 +839,7 @@ else{
 		localStorage.setItem("color7",color7);
 		localStorage.setItem("year7",year7);
 		localStorage.setItem("type7",type7);
+		localStorage.setItem("desc7",desc7);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
 			window.location="testdrive.html";
@@ -832,6 +857,7 @@ else{
 		var color8=document.getElementById("color8").innerHTML;
 		var year8=document.getElementById("year8").innerHTML;
 		var type8=document.getElementById("type8").innerHTML;
+		var desc8=document.getElementById("desc8").innerHTML;
 		 var email =localStorage.getItem("email_login");
 		
 		debugger
@@ -842,6 +868,7 @@ else{
 		localStorage.setItem("color8",color8);
 		localStorage.setItem("year8",year8);
 		localStorage.setItem("type8",type8);
+		localStorage.setItem("desc8",desc8);
 		localStorage.setItem("opt8",opt);
 		localStorage.setItem("email_login",email);
 			window.location="testdrive.html";
@@ -880,6 +907,7 @@ else{
 			   const color = viewcar.color;
 			    const year = viewcar.year;
 				 const type = viewcar.type;
+				 const desc = viewcar.desc;
 				  const Image = viewcar.Image;
 			
 
@@ -892,7 +920,7 @@ const tbody= table.getElementsByTagName('tbody')[0];
 
 const row = tbody.insertRow(tbody.rows.length);
 
-const viewCars= new ViewCarss(InvtId,brand,model,price,color,year,type,Image);
+const viewCars= new ViewCarss(InvtId,brand,model,price,color,year,type,desc,Image);
 console.log(viewCars.writeValue());
 const cell1 = row.insertCell(0);
 const cell2 = row.insertCell(1);
@@ -904,6 +932,7 @@ const cell7 = row.insertCell(6);
 const cell8 = row.insertCell(7);
 const cell9 = row.insertCell(8);
 const cell10 = row.insertCell(9);
+const cell11 = row.insertCell(10);
 cell1.innerHTML = viewCars.InvtId;
 cell2.innerHTML = viewCars.brand;
 cell3.innerHTML =  viewCars.model;
@@ -911,9 +940,10 @@ cell4.innerHTML = viewCars.price;
 cell5.innerHTML = viewCars.color;
 cell6.innerHTML = viewCars.year;
 cell7.innerHTML =  viewCars.type;
-cell8.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
-cell9.innerHTML = "<button type='button' onclick=\"editCarNew(\'" + InvtId + "\',\'" + brand + "\',\'" + model + "\',\'" + price + "\',\'" + color + "\',\'" + year + "\',\'" + type + "\')\">Edit</button>";
-cell10.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId + "\')\">Delete</button>";
+cell8.innerHTML =  viewCars.desc;
+cell9.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
+cell10.innerHTML = "<button type='button' onclick=\"editCarNew(\'" + InvtId + "\',\'" + brand + "\',\'" + model + "\',\'" + price + "\',\'" + color + "\',\'" + year + "\',\'" + type + "\',\'" + desc + "\')\">Edit</button>";
+cell11.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId + "\')\">Delete</button>";
 			}
 
 			
@@ -955,7 +985,7 @@ cell10.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId 
 		
 	}
 	
-	function editCarNew(id,brand, model,price,color,year,type){
+	function editCarNew(id,brand, model,price,color,year,type,desc){
 		localStorage.setItem("selected_cars_id",id);
 		localStorage.setItem("brandedit",brand);
 		localStorage.setItem("brandmodel",model);
@@ -963,6 +993,7 @@ cell10.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId 
 		localStorage.setItem("brandcolor",color);
 		localStorage.setItem("brandyear",year);
 		localStorage.setItem("brandtype",type);
+		localStorage.setItem("branddesc",desc);
 		window.location="editcars.html";
 		
 		
@@ -1018,6 +1049,8 @@ function passValues(opt){
 		var color=document.getElementById("color1").innerHTML;
 		var year=document.getElementById("year1").innerHTML;
 		var type=document.getElementById("type1").innerHTML;
+		var desc=document.getElementById("desc1").innerHTML;
+		
 		
 		 var email =localStorage.getItem("email_login");
 		
@@ -1029,6 +1062,7 @@ function passValues(opt){
 		localStorage.setItem("color1",color);
 		localStorage.setItem("year1",year);
 		localStorage.setItem("type1",type);
+		localStorage.setItem("desc1",desc);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
 		window.location="Booking.html";
@@ -1050,6 +1084,7 @@ function passValues(opt){
 		var color2=document.getElementById("color2").innerHTML;
 		var year2=document.getElementById("year2").innerHTML;
 		var type2=document.getElementById("type2").innerHTML;
+		var desc2=document.getElementById("desc2").innerHTML;
 		
 		debugger
 		localStorage.setItem("carcode",carcode);
@@ -1059,6 +1094,7 @@ function passValues(opt){
 		localStorage.setItem("color2",color2);
 		localStorage.setItem("year2",year2);
 		localStorage.setItem("type2",type2);
+		localStorage.setItem("desc2",desc2);
 		localStorage.setItem("opt",opt);
 			window.location="Booking.html";
 		
@@ -1074,6 +1110,7 @@ function passValues(opt){
 		var color3=document.getElementById("color3").innerHTML;
 		var year3=document.getElementById("year3").innerHTML;
 		var type3=document.getElementById("type3").innerHTML;
+		var desc3=document.getElementById("desc3").innerHTML;
 		
 		debugger
 		localStorage.setItem("carcode",carcode);
@@ -1083,6 +1120,7 @@ function passValues(opt){
 		localStorage.setItem("color3",color3);
 		localStorage.setItem("year3",year3);
 		localStorage.setItem("type3",type3);
+		localStorage.setItem("desc3",desc3);
 		localStorage.setItem("opt",opt);
 			window.location="Booking.html";
 		
@@ -1100,6 +1138,7 @@ function passValues(opt){
 		var color4=document.getElementById("color4").innerHTML;
 		var year4=document.getElementById("year4").innerHTML;
 		var type4=document.getElementById("type4").innerHTML;
+		var desc4=document.getElementById("desc4").innerHTML;
 		
 		debugger
 		localStorage.setItem("carcode",carcode);
@@ -1109,6 +1148,7 @@ function passValues(opt){
 		localStorage.setItem("color4",color4);
 		localStorage.setItem("year4",year4);
 		localStorage.setItem("type4",type4);
+		localStorage.setItem("desc4",desc4);
 		localStorage.setItem("opt",opt);
 		window.location="Booking.html";
 		
@@ -1126,6 +1166,7 @@ function passValues(opt){
 		var color5=document.getElementById("color5").innerHTML;
 		var year5=document.getElementById("year5").innerHTML;
 		var type5=document.getElementById("type5").innerHTML;
+		var desc5=document.getElementById("desc5").innerHTML;
 		
 		debugger
 		localStorage.setItem("carcode",carcode);
@@ -1135,6 +1176,7 @@ function passValues(opt){
 		localStorage.setItem("color5",color5);
 		localStorage.setItem("year5",year5);
 		localStorage.setItem("type5",type5);
+		localStorage.setItem("desc5",desc5);
 		localStorage.setItem("opt",opt);
 			window.location="Booking.html";
 		
@@ -1151,6 +1193,7 @@ function passValues(opt){
 		var color6=document.getElementById("color6").innerHTML;
 		var year6=document.getElementById("year6").innerHTML;
 		var type6=document.getElementById("type6").innerHTML;
+		var desc6=document.getElementById("desc6").innerHTML;
 		
 		debugger
 		localStorage.setItem("carcode",carcode);
@@ -1160,6 +1203,7 @@ function passValues(opt){
 		localStorage.setItem("color6",color6);
 		localStorage.setItem("year6",year6);
 		localStorage.setItem("type6",type6);
+		localStorage.setItem("desc6",desc6);
 		localStorage.setItem("opt",opt);
 			window.location="Booking.html";
 		
@@ -1177,6 +1221,7 @@ function passValues(opt){
 		var color7=document.getElementById("color7").innerHTML;
 		var year7=document.getElementById("year7").innerHTML;
 		var type7=document.getElementById("type7").innerHTML;
+		var desc7=document.getElementById("desc7").innerHTML;
 		
 		debugger
 		localStorage.setItem("carcode",carcode);
@@ -1186,6 +1231,8 @@ function passValues(opt){
 		localStorage.setItem("color7",color7);
 		localStorage.setItem("year7",year7);
 		localStorage.setItem("type7",type7);
+		localStorage.setItem("desc7",desc7);
+		
 		localStorage.setItem("opt",opt);
 			window.location="Booking.html";
 		
@@ -1202,6 +1249,7 @@ function passValues(opt){
 		var color8=document.getElementById("color8").innerHTML;
 		var year8=document.getElementById("year8").innerHTML;
 		var type8=document.getElementById("type8").innerHTML;
+		var desc8=document.getElementById("desc8").innerHTML;
 		
 		debugger
 		localStorage.setItem("carcode",carcode);
@@ -1211,6 +1259,7 @@ function passValues(opt){
 		localStorage.setItem("color8",color8);
 		localStorage.setItem("year8",year8);
 		localStorage.setItem("type8",type8);
+		localStorage.setItem("desc8",desc8);
 		localStorage.setItem("opt8",opt);
 			window.location="Booking.html";
 		
@@ -1219,7 +1268,7 @@ function passValues(opt){
 	
 	
 	
-		function testDrive(opt){
+	/* 	function testDrive(opt){
 			if(opt==1){
 		   testdrive1(opt);	
 		   
@@ -1486,6 +1535,349 @@ function passValues(opt){
 		return false;
 	}
 	
+	 */
+	
+	function validationBookingInfo(){
+  
+  $(document).ready(function () {
+	
+	    var _carcode= document.getElementById("carcode").innerHTML;
+		var _brand = document.getElementById("brand").innerHTML;
+	    var _model = document.getElementById("model").innerHTML;
+		var _price = document.getElementById("price").innerHTML;
+	    var _color = document.getElementById("color").innerHTML;
+		var _year = document.getElementById("year").innerHTML;
+	    var _type = document.getElementById("type").innerHTML;
+	    var _desc = document.getElementById("desc").innerHTML;
+ 		var _fname = document.getElementById("fname").value;
+	    var _lname = document.getElementById("lname").value;
+		var _address = document.getElementById("address").value;
+	    var _cemail = document.getElementById("cemail").value;
+		var _cphone = document.getElementById("cphone").value;
+		
+	
+
+		
+	  	if(_fname == ""){
+				document.getElementById('fname').innerHTML =alert(" ** Please fill the Firstname field");
+				return false;
+			}
+			else if((_fname.length <= 2) || (_fname.length > 20)) {
+				document.getElementById('fname').innerHTML = alert("**  Firstname length must be between 2 and 20");
+				return false;	
+			}
+			else if(!isNaN(_fname)){
+				document.getElementById('fname').innerHTML =alert(" ** only characters are allowed in Firstname field" );
+				return false;
+			} 
+
+			    
+
+			else if(_lname == ""){
+				document.getElementById('lname').innerHTML =alert(" ** Please fill the lastname field");
+				return false;
+			}
+			
+			 else if((_lname.length <= 2) || (_lname.length > 20)) {
+				document.getElementById('lname').innerHTML = alert("**  lastname length must be between 2 and 20");
+				return false;	
+			}
+			else if(!isNaN(_lname)){
+				document.getElementById('lname').innerHTML =alert(" ** only characters are allowed in lastname field" );
+				return false;
+			}
+			 
+			 else if(_address == ""){
+				document.getElementById('address').innerHTML =alert(" ** Please fill the address field");
+				return false;
+			}
+			else if(_cemail == ""){
+				document.getElementById('cemail').innerHTML =alert(" ** Please fill the email id` field");
+				return false;
+			}
+			 else if(_cemail.indexOf('@') <= 0 ){
+				document.getElementById('cemail').innerHTML =alert(" ** @ Invalid Position");
+				return false;
+			}
+ 
+			else if((_cemail.charAt(_cemail.length-4)!='.') && (_cemail.charAt(_cemail.length-3)!='.')){
+				document.getElementById('cemail').innerHTML =alert(" ** . Invalid Position");
+				return false;
+			} 
+ 
+
+	    else   if(_cphone== ""){
+				document.getElementById('cphone').innerHTML =alert(" ** Please fill the phoneno field");
+				return false;
+			}
+			
+				
+			else{
+			
+		
+        localStorage.setItem("carcode",_carcode);
+        localStorage.setItem("brand",_brand);
+		localStorage.setItem("model",_model);
+		localStorage.setItem("price",_price);
+		localStorage.setItem("color",_color);
+		localStorage.setItem("year",_year);
+		localStorage.setItem("type",_type);
+		localStorage.setItem("desc",_desc);
+	    localStorage.setItem("fname",_fname);
+		localStorage.setItem("lname",_lname);
+		localStorage.setItem("address",_address);
+		localStorage.setItem("cemail",_cemail);
+		localStorage.setItem("cphone",_cphone);
+	
+		
+		
+		
+		
+			$('#book').click(() => {
+				var radios = document.getElementsByName('genderS');
+
+       for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+			
+    // do whatever you want with the checked radio
+        
+		 if(radios[i].value==2){
+			 
+			 localStorage.setItem("payment_option","exchange");
+			 window.location ="exchange.html";
+			 
+		 }
+		 else if(radios[i].value==1){
+			 localStorage.setItem("payment_option","finance");
+			  window.location ="finance.html";
+		 }
+		 else{
+			 localStorage.setItem("payment_option","cash");
+			 bookByCash();
+			 
+		 }
+
+    // only one radio can be logically checked, don't check the rest
+    break;
+  }
+}
+				
+			//	window.location="Home.html";
+
+
+			return false;
+		
+		
+		
+		
+		
+		
+		
+			});
+		
+				
+			}
+			  		
+				
+			});
+	}
+			
+			
+			
+			function bookByCash(){
+				
+				
+				
+				console.log('Inserting a booking');
+				   const carcode =  $('#carcode').text();
+					const brand =  $('#brand').text();
+	  const model =  $('#model').text();
+		const price =  $('#price').text();
+	  const color =  $('#color').text();
+		const year =  $('#year').text();
+	   const type =  $('#type').text();
+	     const desc  =  $('#desc').text();
+ 		const fname = $('#fname').val();
+        const lname = $('#lname').val();
+		const address =  $('#address').val();
+	    const cemail = $('#cemail').val();
+		const cphone = $('#cphone').val();
+
+			
+			 
+	
+
+				const booking = new Booking(carcode,brand ,model,price,color,year,type,desc,fname, lname, address, cemail, cphone);
+				
+				     localStorage.setItem("carcode",carcode);
+        localStorage.setItem("brand",brand);
+		localStorage.setItem("model",model);
+		localStorage.setItem("price",price);
+		localStorage.setItem("color",color);
+		localStorage.setItem("year",year);
+		localStorage.setItem("type",type);
+		localStorage.setItem("desc",desc);
+	    localStorage.setItem("fname",fname);
+		localStorage.setItem("lname",lname);
+		localStorage.setItem("address",address);
+		localStorage.setItem("cemail",cemail);
+		localStorage.setItem("cphone",cphone);
+
+				console.log(booking);
+
+				$.post(url + '/bookingcar', booking, (res) => {
+					console.log("Booked ", res)
+					window.location="payment.html";
+				});
+			}
+
+			
+			
+			
+			function cancelBooking(){
+		 $(document).ready(function () {
+		
+	// Delete Car
+	$('#bo').click(() => {
+		console.log('Deleting a car');
+		const id = $('#carcode').text();
+
+		$.ajax({
+			url: url + `/cancelbooking/${id}`,
+			type: 'DELETE',
+			success: (res) => {
+			  alert("booking cancel sucessfully");
+			  window.location="Home.html";
+			  console.log('delete response', res)
+			},
+			error: (err) => {
+				console.log('delete error', err)
+			}
+		});
+	});
+		 });
+	}
+	
+		
+	
+		function viewCars(){
+		 $(document).ready(function () {
+			// Get All cars by id
+	 $('#vcar').click(() => {
+		const id = $('#vid').val();
+		console.log(`Requesting car with id ${id}`);
+
+		$.get(url + `/viewCar/${id}`, (res) => {
+			// res is an array!
+			
+			if(res.errorcode!="403"){
+				const viewcar = ViewCar.fromRow(res[0]);
+			console.log('data:', viewcar);
+			
+			const InvtId = viewcar.InvtId;
+			
+            const brand = viewcar.brand;
+			
+			 const model = viewcar.model;
+			  const price = viewcar.price;
+			   const color = viewcar.color;
+			    const year = viewcar.year;
+				 const type = viewcar.type;
+				  const desc = viewcar.desc;
+				  const Image = viewcar.Image;
+			
+
+
+			
+			
+const table = document.getElementById('table1');
+
+const tbody= table.getElementsByTagName('tbody')[0];
+
+const row = tbody.insertRow(tbody.rows.length);
+
+const viewCars= new ViewCar(InvtId,brand,model,price,color,year,type,desc,Image);
+console.log(viewCars.writeValue());
+const cell1 = row.insertCell(0);
+const cell2 = row.insertCell(1);
+const cell3 = row.insertCell(2);
+const cell4 = row.insertCell(3);
+const cell5 = row.insertCell(4);
+const cell6 = row.insertCell(5);
+const cell7 = row.insertCell(6);
+const cell8 = row.insertCell(7);
+const cell9 = row.insertCell(8);
+cell1.innerHTML = viewCars.InvtId;
+cell2.innerHTML = viewCars.brand;
+cell3.innerHTML =  viewCars.model;
+cell4.innerHTML = viewCars.price; 
+cell5.innerHTML = viewCars.color;
+cell6.innerHTML = viewCars.year;
+cell7.innerHTML =  viewCars.type;
+cell8.innerHTML =  viewCars.desc;
+cell9.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
+ }
+else{
+	alert(res.message);
+}
+		});	
+		});
+		// alert("Invalid Id");
+	});
+	
+	
+	}
+		
+
+		
+	
+		function payment(){
+	    var _cardname = document.getElementById("cname").value;
+		var _cardno = document.getElementById("cardno").value;
+	    var _expdate = document.getElementById("expdate").value;
+		var _cvv = document.getElementById("cvv").value;
+		
+	
+
+		
+	  	if(_cardname == ""){
+				document.getElementById('cardname').innerHTML =alert(" ** Please fill the cardname field");
+				return false;
+			}
+			
+				else if(_cardno == ""){
+				document.getElementById('cardno').innerHTML =alert(" ** Please fill the cardno field");
+				return false;
+			}
+			
+			else if(_cardno.length != 16) {
+				document.getElementById('cardno').innerHTML = alert("**  cardno length must be 16");
+				return false;	
+			}
+			else if(isNaN(_cardno)){
+				document.getElementById('cardno').innerHTML =alert(" ** only nos are allowed in Firstname field" );
+				return false;
+			} 
+			else if(_expdate == ""){
+				document.getElementById('expdate').innerHTML =alert(" ** Please fill the expdate field");
+				return false;
+			}
+			else if(_cvv == ""){
+				document.getElementById('cvv').innerHTML =alert(" ** Please fill the Cvv field");
+				return false;
+			}
+			else if(_cvv.length != 3) {
+				document.getElementById('cardno').innerHTML = alert("**  cvv length must be 3");
+				return false;	
+			}
+			
+			
+			
+			 
+			alert("Booking sucessfully");
+			window.location="Thankyou.html";
+		}
+		
 		
 		
 		

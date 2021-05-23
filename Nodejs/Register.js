@@ -95,7 +95,7 @@ app.post("/AddCar", (req, res) => {
   console.log("body", req.body);
 
   connection.query(
-    `INSERT INTO inventory (brand,model,price,color,year,type,Image) VALUES  ('${req.body.brand}','${req.body.model}','${req.body.price}','${req.body.color}','${req.body.year}','${req.body.type}','${req.body.img}')`,
+    `INSERT INTO inventory (brand,model,price,color,year,type,description,Image) VALUES  ('${req.body.brand}','${req.body.model}','${req.body.price}','${req.body.color}','${req.body.year}','${req.body.type}','${req.body.desc}','${req.body.img}')`,
     (err, rows) => {
       if (err) throw err;
       res.send(rows);
@@ -167,7 +167,7 @@ app.get("/viewAllCars/:filter", (req, res) => {
   console.log("Fetching all cars...");
   var filter = req.params.filter;
   console.log(req.params);
-  if (filter == "all") {
+  if (filter == "All") {
     sql = "SELECT * FROM inventory ";
   } else {
     sql = "SELECT * FROM inventory where type='" + filter + "'";
@@ -178,6 +178,22 @@ app.get("/viewAllCars/:filter", (req, res) => {
     res.json(rows);
   });
 });
+
+// Car Reservation
+app.post("/bookingcar", (req, res) => {
+  console.log(`booking car ... `);
+
+  console.log("body", req.body);
+
+  connection.query(
+    `INSERT INTO reservation (invt_id,fname,lname,address,email,Phoneno) VALUES  ('${req.body.carcode}','${req.body.fname}','${req.body.lname}','${req.body.address}','${req.body.cemail}','${req.body.cphone}')`,
+    (err, rows) => {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
+});
+
 // Listen
 app.listen(port, () => {
   console.log(`Student app listening at http://localhost:${port}`);
