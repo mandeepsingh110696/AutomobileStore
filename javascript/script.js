@@ -1879,6 +1879,181 @@ else{
 		}
 		
 		
+			function exchange(){
+
+	
+   $(document).ready(function() {
+			
+		var _BrandName = document.getElementById("BrandName").value;
+		var _Model = document.getElementById("Model").value;
+		var _Color = document.getElementById("Color").value;
+		var _Description = document.getElementById("Description").value;
+		var _currentOwner = document.getElementById("currentOwner").value;
+		var _EstimatedPrice = document.getElementById("EstimatedPrice").value;
+		
+		
+		
+	 	var carcode=localStorage.getItem("carcode"); 
+	    var brand=localStorage.getItem("brand");
+	    var model=localStorage.getItem("model");
+	    var price=localStorage.getItem("price");
+	    var color=localStorage.getItem("color");
+	    var year=localStorage.getItem("year");
+	    var type =localStorage.getItem("type");
+       
+	  
+ 
+
+
+
+		
+				if(_BrandName == ""){
+				document.getElementById('BrandName').innerHTML =alert(" ** Please fill the BrandName field");
+				return false;
+			}
+			
+			else if(!isNaN(_BrandName)){
+				document.getElementById('BrandName').innerHTML =alert(" ** only characters are allowed in BrandName field" );
+				return false;
+			} 
+
+
+			else if(_Model == ""){
+				document.getElementById('Model').innerHTML =alert(" ** Please fill the Model field");
+				return false;
+			}
+			
+			else if(!isNaN(_Model)){
+				document.getElementById('Model').innerHTML =alert(" ** only characters are allowed in Model field" );
+				return false;
+			}
+			 
+			else if(_Color == ""){
+				document.getElementById('Color').innerHTML =alert(" ** Please fill the Color field");
+				return false;
+			}
+				else if(_Description == ""){
+				document.getElementById('Description').innerHTML =alert(" ** Please fill the Description field");
+				return false;
+			}
+			else if(_currentOwner == ""){
+				document.getElementById('currentOwner').innerHTML =alert(" ** Please fill the currentOwner field");
+				return false;
+			}
+			 else if(_EstimatedPrice == ""){
+				document.getElementById('EstimatedPrice').innerHTML =alert(" ** Please fill the EstimatedPrice field");
+				return false;
+			}
+			else
+			{
+					$('#exchange').click(() => {
+				localStorage.setItem("estimatedprice",_EstimatedPrice);		
+				console.log('Inserting exchange car info');
+
+				const BrandName = $('#BrandName').val();
+				const Model = $('#Model').val();
+				const Color = $('#Color').val();
+				const Description = $('#Description').val();
+				const currentOwner= $('#currentOwner').val();
+				const EstimatedPrice= $('#EstimatedPrice').val();
+				
+		  localStorage.setItem("carcode",carcode);
+        localStorage.setItem("brand",brand);
+		localStorage.setItem("model",model);
+		localStorage.setItem("price",price);
+		localStorage.setItem("color",color);
+		localStorage.setItem("year",year);
+		localStorage.setItem("type",type);
+	  
+		
+				const exchange = new Exchange(BrandName,Model,Color,Description,currentOwner,EstimatedPrice);
+
+				console.log(exchange);
+
+				$.post(url + '/exchange', exchange, (res) => {
+					console.log("Created ", res);
+					alert(res.message);
+					window.location="payment.html";
+				});
+			});
+
+			
+
+
+			return false;
+
+		}
+	});
+				
+			    
+				
+				
+			}
+			
+			
+			function finance(){
+
+	
+   $(document).ready(function() {
+			
+		var _loanterm = document.getElementById("loan_term").value;
+		var _interval = document.getElementById("interval").value;
+		
+				if(_loanterm == ""){
+				document.getElementById('loan_term').innerHTML =alert(" ** Please fill the BrandName field");
+				return false;
+			}
+			
+			
+
+			else if(_interval == ""){
+				document.getElementById('interval').innerHTML =alert(" ** Please fill the Model field");
+				return false;
+			}
+			
+		
+			else
+			{
+					$('#finance').click(() => {
+				console.log('Inserting finance car info');
+
+				const loan_term = $('#loan_term').val();
+				const interval = $('#interval').val();
+				 var Invt_Id=localStorage.getItem("carcode");
+				 
+				 
+				
+				
+		  localStorage.setItem("loan_term",loan_term);
+        localStorage.setItem("interval",interval);
+		
+		
+				const finance = new Finance(loan_term,interval,Invt_Id);
+
+				console.log(finance);
+
+				$.post(url + '/finance', finance, (res) => {
+					console.log("Created ", res);
+					alert(res.message);
+					window.location="payment.html";
+				});
+			});
+
+			
+
+
+			return false;
+
+		}
+	});
+				
+			    
+				
+				
+			}
+			
+		
+		
 		
 		
 		

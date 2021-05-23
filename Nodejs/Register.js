@@ -194,6 +194,33 @@ app.post("/bookingcar", (req, res) => {
   );
 });
 
+app.post("/exchange", (req, res) => {
+  console.log(`Inserting  exchnage car info  ... `);
+
+  console.log("body", req.body);
+
+  connection.query(
+    `INSERT INTO exchange_car (brand,model,color,car_desc,current_owner,price) VALUES  ('${req.body.BrandName}','${req.body.Model}','${req.body.Color}','${req.body.Description}','${req.body.currentOwner}','${req.body.EstimatedPrice}')`,
+    (err, rows) => {
+      if (err) throw err;
+      res.json({ message: "exchange car info send successfully" });
+    }
+  );
+});
+
+app.post("/finance", (req, res) => {
+  console.log(`Inserting  finance car info  ... `);
+
+  console.log("body", req.body);
+
+  connection.query(
+    `INSERT INTO finance_car (loan_term,installment_interval,InvtId) VALUES  ('${req.body.loanterm}','${req.body.interval}','${req.body.Invt_Id}')`,
+    (err, rows) => {
+      if (err) throw err;
+      res.json({ message: "Finance info send successfully" });
+    }
+  );
+});
 // Listen
 app.listen(port, () => {
   console.log(`Student app listening at http://localhost:${port}`);
