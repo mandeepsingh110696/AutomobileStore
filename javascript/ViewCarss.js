@@ -1,4 +1,4 @@
-class ViewCar{
+class ViewCarss{
 	constructor(InvtId,brand,model,price,color,year,type,desc,Image) {
 		
 		this.InvtId = InvtId;
@@ -13,7 +13,7 @@ class ViewCar{
 	}
 
 	static fromRow(row) {
-		return new ViewCar(row.InvtId,row.brand ,row.model,row.price,row.color,row.year,row.type,row.desc,row.Image);
+		return new ViewCarss(row.InvtId,row.brand ,row.model,row.price,row.color,row.year,row.type,row.desc,row.Image);
 	}
 
 	 writeValue(){

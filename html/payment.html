@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/payment.css" type="text/css" />
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 <script src="../javascript/script.js" ></script>
+    <title>Page1</title>
+</head>
+
+<body>
+    <!-- this div tag is used for navigation bar and for logo-->
+    <div class="nav">
+        <table>
+            <!-- Here we define the row element for navbar -->
+            <tr>
+                <!-- Here we define the column element for logo -->
+                <td>
+
+                    <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+                    <h2> <img src="../Images/goldnewlogo.png" class="cover"> </h2>
+                </td>
+                <!-- Here we define the column element for hyperlinks for other pages -->
+                <td>
+                    <!-- Here are the hyperlinks using anchor tag -->
+                    <a class="active" href="page1.html">Home</a>
+                    <a href="page2.html">Cars </a>
+                    <a href="page3.html">Car Details</a>
+                    <a href="page4.html">About Us</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="background">
+	
+	 <label id="carcode"  style="display:none;">Expiry Date</label>
+					   <label id="brand" style="display:none;">Expiry Date</label>
+					   <label id="model"  style="display:none;">Expiry Date</label>
+					   
+					   <h1 style="color:white;text-align:center;color:goldenrod">Payment to be made:</h1>
+					   	   <h1 id="price" style="color:white;text-align:center;color:goldenrod">Expiry Date</h1>
+						   
+		              <label id="color"  style="display:none;">Expiry Date</label>
+					   <label id="year"  style="display:none;">Expiry Date</label>
+					      <label id="type"  style="display:none;">Expiry Date</label>
+		
+
+       
+        
+            <div class="container">
+              <div class="icons">
+           <center>   <div>
+                <img src="../Images/visa.png" class="cards">
+                <img src="../Images/amex.png" class="cards">
+                <img src="../Images/paypal.png" class="cards">
+                <img src="../Images/Mastercard.png" class="cards">
+              </div>
+            </center>
+              </div>
+                
+                <div class="row">
+                  <div class="col-label">
+                    <label>Card Holder Name</label>
+                  </div>
+                  <div class="col-input">
+                    <input type="text"   id="cname"name="Card holder name" placeholder="Enter the name of a card holder">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-label">
+                    <label>Card Number</label>
+                  </div>
+                  <div class="col-input">
+                    <input type="text" id="cardno" name="card number" placeholder="Enter the number of a Card">
+                  </div>
+                </div>
+        
+                
+                  <div class="row">
+                    <div class="col-label">
+                      <label>Expiry Date</label>
+                    </div>
+                    <div class="col-input">
+                      <input type="month"  id="expdate"class="date" name="expiry date" placeholder="MM/YY">
+                      <input type="number"  id="cvv" name="CVV" placeholder="CVV"><br>
+                      <a href="#">CVV</a>
+                    </div>
+                    
+                  </div>
+                <div class="row">
+                  <input type="button" value="Confirm" onclick="payment()">
+                  <input type="button" value="Cancel">
+                </div>
+               
+                
+              </div>
+              
+        </div>
+		
+		<span  id="price" style="color:white;"></span>
+    <script>
+	 var price = localStorage.getItem("price");
+	 price=price.replace("$","");
+	 var loan_term=localStorage.getItem("loan_term");
+	 var interval=localStorage.getItem("interval");
+	 document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	document.getElementById("brand").innerHTML=localStorage.getItem("brand");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model");
+	 if(localStorage.getItem("payment_option")=="exchange"){
+	   document.getElementById("price").innerHTML=price-localStorage.getItem("estimatedprice")+"$";
+	 }
+	 else if(localStorage.getItem("payment_option")=="cash"){
+	 document.getElementById("price").innerHTML=localStorage.getItem("price");
+	 }
+	 else if(localStorage.getItem("payment_option")=="finance"){
+	  if(interval=="Monthly"){
+	     var final_price=price/(loan_term*12);
+		 document.getElementById("price").innerHTML=final_price+"$";
+	  }
+	  else if(interval=="BiWeekly")
+	   var final_price=price/(loan_term*24);
+	   document.getElementById("price").innerHTML=final_price+"$";	 
+	 }
+	 document.getElementById("color").innerHTML=localStorage.getItem("color");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type");
+	
+
+	 
+	 
+    </script>
+	 
+</body>
+
+ 
+</html>

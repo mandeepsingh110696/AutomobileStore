@@ -26,14 +26,10 @@
             <a href="editcars.html">   Edit car details</a>
             </td>
         </tr>
+       
         <tr>
             <td>
-                <a href="removecars.html">   Remove cars</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="viewcars.html">   View cars</a>
+                <a href="viewcarss.html">   View cars</a>
             </td>
         </tr>
     </table>
@@ -84,6 +80,13 @@
 		alert("You have been logout successfuly")
 		window.location="";
 	}
+	document.getElementById("cid").value=localStorage.getItem("selected_cars_id");
+	document.getElementById("ebrand").value=localStorage.getItem("brandedit");
+	document.getElementById("emodel").value=localStorage.getItem("brandmodel");
+	document.getElementById("eprice").value=localStorage.getItem("brandprice");
+	document.getElementById("ecolor").value=localStorage.getItem("brandcolor");
+	document.getElementById("eyear").value=localStorage.getItem("brandyear");
+	document.getElementById("etype").value=localStorage.getItem("brandtype");
 </script>
 </body>
 </html>

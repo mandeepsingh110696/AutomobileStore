@@ -1,5 +1,5 @@
 class AddCar{
-	constructor(brand,model,price,color,year,type,img) {
+	constructor(brand,model,price,color,year,type,desc,img) {
 		
 		
 		this.brand = brand;
@@ -8,11 +8,12 @@ class AddCar{
 		this.color = color;
 		this.year = year;
 		this.type = type;
+		this.desc = desc;
 		this.img = img;
 	}
 
 	static fromRow(row) {
-		return new AddCar(row.brand ,row.model,row.price,row.color,row.year,row.type,row.img);
+		return new AddCar(row.brand ,row.model,row.price,row.color,row.year,row.type,row.desc,row.img);
 	}
 
 	toString() {
