@@ -1,0 +1,207 @@
+// car inventory page
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- This will generate the title of the page -->
+  <title>Inventory</title>
+  <!-- This section will link the html file to css file -->
+  <link rel="stylesheet" href="../css/Inventory.css">
+  <script src="../javascript/script.js"></script>
+  <script src="../javascript/fetchcars.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- this div tag is used for navigation bar and for logo-->
+  <div class="nav">
+    <table>
+      <!-- Here we define the row element for navbar -->
+      <tr>
+        <!-- Here we define the column element for logo -->
+        <td>
+          <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+          <h2> <img src="../Images/goldnewlogo.png" class="cover"> </h2>
+        </td>
+        <!-- Here we define the column element for hyperlinks for other pages -->
+        <td>
+          <!-- Here are the hyperlinks using anchor tag -->
+       <a href="Home.html">Home</a>
+                    <a href="Profile.html">Profile</a>
+						 <a  href="Inventory.html">Inventory</a>
+						   <a  href="bookhistory.html">Booking History</a>
+                    <a class="active" href="ContactUs.html">Contact Us</a>
+					 
+        </td>
+		 <div  class="nav-right">
+					 <a href="javascript:signout();" >signout</a>
+					</div>
+      </tr>
+    </table>
+  </div>
+  
+  <form>
+  <label for="cars"style="margin-left:490px;width:10%;color:#DAA520;font-size:18px;">Choose a car type:</label>
+  <select name="cars" id="cars">
+  <option value="all">all</option>
+    <option value="Luxury">Luxury</option>
+    <option value="Economy">Economy</option>
+    <option value="Suv">Suv</option>
+	
+  </select>
+  <br><br>
+  <input type="button"  value="Filter" style="margin-left:555px;background-color:#Daa520;width:10%" onclick="filter()">
+</form>
+  
+
+ 
+ 
+ 
+ // code to be written here
+ 
+ 
+ <table id="Container"  style="margin-top: 150px;">
+  
+ 
+ 
+ </table>
+   
+  </section>
+
+
+
+
+
+
+</body>
+<script>
+
+
+
+function filter() {
+	// for dropdown 
+	var e = document.getElementById("cars");
+	var strUser = e.options[e.selectedIndex].value;
+	var strUser1 = e.options[e.selectedIndex].text;
+	viewAllCars(strUser1);
+
+}
+
+function signout(){
+		alert("You have been logout successfuly")
+		window.location="index.html"
+	}
+	
+	
+	
+	function viewAllCars(filter){
+	     
+		  
+		 $(document).ready(function () {
+		
+	 
+		 
+		$.get(url + `/viewAllCars/${filter}`,(res) => {
+		// Get All Cars
+	   
+		console.log('Getting all cars');
+		    
+			console.log('data:', res);
+			
+			var html="";
+			res.forEach(function(arr,index){
+			    html=html+getCarModel(index+1,arr.InvtId,arr.brand,arr.model,arr.price,arr.color,arr.year,arr.type,arr.Image);
+				
+			});
+			console.log(html);
+			document.getElementById('Container').innerHTML=html;
+		});
+	
+	});	
+	}
+	viewAllCars("all");
+	
+
+	function getCarModel(index,carcode,brand,model,price,color,year,type,image)
+	    {
+		if(index%2==0){
+	    var code= `<tr><td><div class="one" style="background-image: url(${image});"></div> <div class="two">
+	  <span>CarCode</span>
+      <span id="carcode${index}" name="carcode${index}" style="color: white;background-color:  black;">${carcode}</span>
+      <br>
+      <br>
+	  <span>Brand</span>
+      <span id="brand${index}" name="brand${index}" style="color: white;background-color:  black;">${brand}</span>
+      <br>
+      <br>
+      <br>
+      <span >Model</span>
+      <span style="color: white;background-color:  black;" id="model${index}" name="model${index}">${model}</span>
+      <br>
+      <br>
+      <br>
+      <span >Price</span>
+      <span style="color: white;background-color:  black;" id="price${index}" name="price${index}">${price}</span>
+      <br>
+      <br>
+      <br>
+      <span >Color</span>
+      <span style="color: white;background-color:  black;" id="color${index}" name="color${index}">${color}</span>
+      <br>
+      <br>
+      <span >Year</span>
+      <span style="color: white;background-color:  black;" id="year${index}" name="year${index}">${year}</span><br><br>
+	  <span >Type</span>
+      <span style="color: white;background-color:  black;" id="type${index}" name="type${index}">${type}</span><br>
+        <button   id="button" class="button buttoneff"style="margin-left: 470px;"  name="rent" onclick="parseValues(${index})" >Buy</button>   
+		
+	</div></div></div></td></tr>`
+	console.log(code);
+	return code;
+	}
+	else{
+	      
+		    var code= `<tr><td><div class="one" style="background-image: url(${image});"></div> <div class="two">
+	  <span>CarCode</span>
+      <span id="carcode${index}" name="carcode${index}" style="color: white;background-color:  black;">${carcode}</span>
+      <br>
+      <br>
+	  <span>Brand</span>
+      <span id="brand${index}" name="brand${index}" style="color: white;background-color:  black;">${brand}</span>
+      <br>
+      <br>
+	  
+      <br>
+      <span >Model</span>
+      <span style="color: white;background-color:  black;" id="model${index}" name="model${index}">${model}</span>
+      <br>
+      <br>
+      <br>
+      <span >Price</span>
+      <span style="color: white;background-color:  black;" id="price${index}" name="price${index}">${price}</span>
+      <br>
+      <br>
+      <br>
+      <span >Color</span>
+      <span style="color: white;background-color:  black;" id="color${index}" name="color${index}">${color}</span>
+      <br>
+      <br>
+      <span >Year</span>
+      <span style="color: white;background-color:  black;" id="year${index}" name="year${index}">${year}</span><br><br>
+	  <span >Type</span>
+      <span style="color: white;background-color:  black;" id="type${index}" name="type${index}">${type}</span><br>
+        <button   id="button" class="button buttoneff"style="margin-left: 470px;"  name="rent" onclick="parseValues(${index})" >Buy</button>   
+		 
+		 
+	</div></div></div></td></tr>`;
+	console.log(code);
+	return code;
+	}
+	}
+</script>
+
+</html>

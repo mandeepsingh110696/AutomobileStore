@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="../css/employee.css" type="text/css" />
+    <link rel="stylesheet"  href="../css/admin.css" type="text/css" />
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../javascript/EditCar.js"></script>
 	 <script src="../javascript/script.js  " ></script>
@@ -26,14 +26,10 @@
             <a href="editcars.html">   Edit car details</a>
             </td>
         </tr>
+       
         <tr>
             <td>
-                <a href="removecars.html">   Remove cars</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="viewcars.html">   View cars</a>
+                <a href="viewcarss.html">   View cars</a>
             </td>
         </tr>
     </table>
@@ -82,8 +78,15 @@
 <script>
   function signout(){
 		alert("You have been logout successfuly")
-		window.location="EmpLogin.html"
+		window.location="";
 	}
+	document.getElementById("cid").value=localStorage.getItem("selected_cars_id");
+	document.getElementById("ebrand").value=localStorage.getItem("brandedit");
+	document.getElementById("emodel").value=localStorage.getItem("brandmodel");
+	document.getElementById("eprice").value=localStorage.getItem("brandprice");
+	document.getElementById("ecolor").value=localStorage.getItem("brandcolor");
+	document.getElementById("eyear").value=localStorage.getItem("brandyear");
+	document.getElementById("etype").value=localStorage.getItem("brandtype");
 </script>
 </body>
 </html>

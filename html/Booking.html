@@ -1,0 +1,199 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/booking.css" type="text/css" />
+    <title>Booking</title>
+
+	
+	
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../javascript/booking.js"></script>
+	 <script src="../javascript/script.js  " ></script>
+	   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+  
+   
+   
+   
+   <div class="center">
+      <input type="checkbox" id="show">
+      <!-- <label for="show" class="show-btn">View Form</label> -->
+      <div class="container">
+    
+		
+		  <label for="show" class="close-btn fas fa-times" title="close"></label>
+        <div class="text" style="color:black;" >Rent Car Info</div>
+        <form >
+          <div class="data" >
+		   <label style="color:black;">CarCode:-</label>
+             <span style="color:black;" id="carcode" name="carcode">McLaren 570S</span><br>
+            <label style="color:black;">Brand:-</label>
+             <span style="color:black;" id="brand" name="brand">McLaren 570S</span><br>
+			  <label style="color:black;">Model:-</label>
+             <span style="color:black;" id="model">345DER</span><br>
+			  <label style="color:black;">Price:-</label>
+             <span style="color:black;" id="price">3456$</span><br>
+			  <label style="color:black;">Color:-</label>
+             <span style="color:black;" id="color">Black</span><br>
+			  <label style="color:black;">Year:-</label>
+             <span style="color:black;" id="year">2020</span><br>
+			  <label style="color:black;">Type:-</label>
+             <span style="color:black;" id="type">luxury</span><br>
+			  <label style="color:black;">Description:-</label>
+             <span style="color:black;" id="desc"></span><br>
+          </div>
+		   
+		     <div class="text" style="color:black;" >Customer Info</div><br>
+			
+			
+		    <label style="color:black;">FirstName</label><br>
+            <input type="text"  placeholder="enter your firstname" id="fname" name="fname">  <br>
+			
+			
+			 <label style="color:black;">LastName</label><br>
+            <input type="text"  placeholder="enter your lastname" id="lname" name="lname">  <br>
+			
+			 <label style="color:black;">Address</label><br>
+            <input type="text"  placeholder="enter your address" id="address" name="address">  <br>
+            <label style="color:black;" >Email</label><br>
+			
+			
+            <input type="text"  placeholder="enter email"  id="cemail" name="cemail"><br>
+          
+          
+            <label style="color:black;">Phoneno</label><br>
+            <input type="text" placeholder="enter phoneno"  id="cphone" name="cphone"><br>
+			
+			 
+          
+		    
+			<p></p>
+
+
+  <label for="gender">Please select your payment method: </label><br>
+<input type="radio" name="genderS" value="0" checked="checked">Cash</input>
+<input type="radio" name="genderS" value="1">Finance</input>
+<input type="radio" name="genderS" value="2">Exchange</input>
+		  
+			                <div id="btn">
+            
+   
+          <button type="button"  class="inner"  id="book"  name="book"  onclick="validationBookingInfo()">Confirm Booking</button>
+            
+			
+			
+          </div>
+       
+         
+        
+        </form>
+      </div>
+    </div>
+
+	
+	
+	
+	
+   <script>
+ 
+	 
+    
+	 if( localStorage.getItem("opt")==1){
+	   document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	   document.getElementById("brand").innerHTML=localStorage.getItem("brand1");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model1");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price1");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color1");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year1");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type1"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc1"); 
+	 
+	 }
+	else if( localStorage.getItem("opt")==2){
+	  document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	  document.getElementById("brand").innerHTML=localStorage.getItem("brand2");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model2");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price2");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color2");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year2");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type2"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc2"); 
+	 }
+	 else if( localStorage.getItem("opt")==3){
+	  document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	  document.getElementById("brand").innerHTML=localStorage.getItem("brand3");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model3");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price3");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color3");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year3");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type3"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc3"); 
+	 }
+	 else if( localStorage.getItem("opt")==4){
+	  document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	  document.getElementById("brand").innerHTML=localStorage.getItem("brand4");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model4");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price4");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color4");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year4");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type4"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc4"); 
+	 }
+	 else if( localStorage.getItem("opt")==5){
+	  document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	  document.getElementById("brand").innerHTML=localStorage.getItem("brand5");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model5");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price5");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color5");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year5");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type5"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc5"); 
+	 }
+	 else if( localStorage.getItem("opt")==6){
+	  document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	  document.getElementById("brand").innerHTML=localStorage.getItem("brand6");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model6");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price6");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color6");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year6");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type6"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc6"); 
+	 }
+	 else if( localStorage.getItem("opt")==7){
+	  document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	  document.getElementById("brand").innerHTML=localStorage.getItem("brand7");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model7");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price7");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color7");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year7");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type7"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc7"); 
+	 }
+	 else if( localStorage.getItem("opt")==8){
+	  document.getElementById("carcode").innerHTML=localStorage.getItem("carcode");
+	  document.getElementById("brand").innerHTML=localStorage.getItem("brand8");
+	 document.getElementById("model").innerHTML=localStorage.getItem("model8");
+	 document.getElementById("price").innerHTML=localStorage.getItem("price8");
+	 document.getElementById("color").innerHTML=localStorage.getItem("color8");
+	 document.getElementById("year").innerHTML=localStorage.getItem("year8");
+	 document.getElementById("type").innerHTML=localStorage.getItem("type8"); 
+	  document.getElementById("desc").innerHTML=localStorage.getItem("desc8"); 
+	 }
+	 
+	 
+	
+	
+   </script>
+
+</body>
+
+
+
+
+</html>

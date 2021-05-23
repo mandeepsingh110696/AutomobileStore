@@ -1,0 +1,688 @@
+/* Basically we defined two generic outer classes over here called odd and even as the name suggest odd is for odd position and even is for even
+position moreover,for every odd one and even one there are some corospondind classes such as one,two upto sixteen which will categorized further
+with respect to shape,image and content. This is just a overview we will see further in detail that how these work all together */
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+.odd {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides */
+
+/* .one, .two {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin: 65px;
+}
+ */
+
+
+/*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like backgroundImage ,background-position and webkit-clip-path , clip-path  */
+
+.one {
+  left: 0;
+  width: 61%;
+  height: 610px;
+  margin-bottom:40px;
+  top: 0;
+  /* background-image: url(../Images/Image190.png); */
+  background-position: -200px -160px;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right  and webkit-clip-path , clip-path */
+
+.two {
+  width: 60%;
+  height: 600px;
+  float:right;
+  right: 0;
+  margin-top: -600px;
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+.even {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and all the margins excedpt margin-bottom  */
+
+.three, .four {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin-top: 680px;
+  margin-left: 57px;
+  margin-right: 57px;
+  /*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres such as left,width,height,top and webkit-clip-path , clip-path  */
+}
+
+.three {
+  left: 0;
+  width: 100%;
+  height: 600px;
+  top: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 53% 0, 100% 100%, 0 100%);
+  /*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right and background image and webkit-clip-path , clip-path  */
+}
+
+.four {
+  width: 62%;
+  height: 600px;
+  right: 0;
+  top: 0;
+  background-image: url(../Images/Image12ii.png);
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon( 0 -6%, 100% 0, 100% 100%, 63.5% 100%);
+}
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+odd {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides except margin bottom */
+
+.five, .six {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin-top: 1280px;
+  margin-left: 65px;
+  margin-right: 63px;
+  /*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like backgroundImage and webkit-clip-path , clip-path  */
+}
+
+.five {
+  left: 0;
+  width: 68%;
+  height: 600px;
+  top: 0;
+  background-image: url(../Images/Image16.png);
+  background-position: -200px -160px;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right and webkit-clip-path , clip-path  */
+
+.six {
+  width: 60%;
+  height: 600px;
+  right: 0;
+  top: 0;
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(50% -10%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+.even {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides  except margin bottom*/
+
+.seven, .eight {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin-top: 1880px;
+  margin-left: 57px;
+  margin-right: 55px;
+}
+
+/*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like left,right,width,height and webkit-clip-path , clip-path */
+
+.seven {
+  left: 0;
+  width: 90%;
+  height: 600px;
+  top: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 53% 0, 100% 100%, 0 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right and backgroundImage and webkit-clip-path , clip-path   */
+
+.eight {
+  width: 60.5%;
+  height: 610px;
+  right: 0;
+  top: 0;
+  background-image: url(../Images/Image14.png);
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon( 0 -13%, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+odd {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides except margin bottom */
+
+.nine, .ten {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin-top: 2500px;
+  margin-left: 65px;
+  margin-right: 63px;
+}
+
+/*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like backgroundImage and background-position  */
+
+.nine {
+  left: 0;
+  width: 60.5%;
+  height: 600px;
+  top: 0;
+  background-image: url(../Images/Image15.png);
+  background-position: -200px -160px;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right and webkit-clip-path , clip-path  */
+
+.ten {
+  width: 60%;
+  height: 600px;
+  right: 0;
+  top: 0;
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+even {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides except margin bottom */
+
+.eleven, .twelve {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin-top: 3105px;
+  margin-left: 57px;
+  margin-right: 55px;
+}
+
+/*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres such as left ,right,height,top webclippath and clippath  */
+
+.eleven {
+  left: 0;
+  width: 90%;
+  height: 600px;
+  top: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 53% 0, 100% 100%, 0 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right, backgroundImage,background-position 
+ webkit-path ,clip-path */
+
+.twelve {
+  width: 65%;
+  height: 600px;
+  right: 0;
+  top: 0;
+  background-image: url(../Images/Image17ii.png);
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon( 0 -15%, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+odd {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides except margin-bottom */
+
+.thirteen, .fourteen {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin-top: 3704px;
+  margin-left: 65px;
+  margin-right: 63px;
+}
+
+/*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like backgroundimage and webkit-path,clip=path */
+
+.thirteen {
+  left: 0;
+  width: 58.5%;
+  height: 600px;
+  top: 0;
+  background-image: url(../Images/Image18.png);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right and webkit-path
+ ,clip-path  */
+
+.fourteen {
+  width: 60%;
+  height: 600px;
+  right: 0;
+  top: 0;
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+even {
+  position: relative;
+  width: 100%;
+}
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides  except margin-bottom*/
+
+.fifteen, .sixteen {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin-top: 4310px;
+  margin-left: 57px;
+  margin-right: 55px;
+}
+
+/*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres such as left,width,height ,top ,webkit-clippath
+ and clip-path
+   */
+
+.fifteen {
+  left: 0;
+  width: 90%;
+  height: 700px;
+  top: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 53% 0, 100% 100%, 0 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,right,top ,backgroundImage,
+ webkit-clippath,clip-path   */
+
+.sixteen {
+  width: 66%;
+  height: 700px;
+  right: 0;
+  top: 0;
+  background-image: url(../Images/Image19ii.png);
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon( 0 -14%, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* This body class  basically fill background color with respect to the body tag */
+
+body {
+  background-color: black;
+}
+
+/* Basically for all the content section we prefer span for its flexibility along with that  we set some more parameters such as color,
+backgroundcolor,margin-left,font-size  and all of this content is in div*/
+
+div span {
+  color: #CA9B4B;
+  margin-left: 470px;
+  font-size: 20px;
+}
+
+/* this is to style the navigation */
+
+.nav {
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+
+.nav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 36px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.nav-right{
+	
+float:right;
+}
+
+
+/* Add a color to the active/current link */
+
+.nav a:active {
+  background-color: black;
+  font-style: initial;
+  color: white;
+}
+
+.cover {
+  width: 50%;
+  margin-left: 60px;
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttoneff {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+  height:10px;
+
+}
+
+.butto {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.buttoneff:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
+
+
+// MODAL STARTS HERE //
+
+.bg-modal {
+	  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 90%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-contents {
+ background-color: #fefefe;
+  margin: auto;
+  top:80%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+input {
+	margin: 15px auto;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
+}
+
+.close {
+	 color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+	.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.register{
+    margin: 50px auto;
+    display:block;
+    width:180px;
+    height:50px;
+    border:3px solid white;
+    background-color:rgba(255,255,255,0);
+    color:white;
+    font-family:sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 1000ms, color 1000ms;
+}
+.register:hover{
+    background-color:rgba(255,255,255,1);
+    color:#222;
+    cursor:pointer;
+    transition: background-color 1000ms, color 1000ms;
+}
+
+
+.registerLink{
+    text-decoration: none;
+    display:block;
+    padding:15px;
+    color:white;
+    transition: color 1000ms;
+}
+
+.registerLink:hover{
+    color:black;
+}
+
+
+/* MODAL */
+
+.modal_container{
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    opacity: 0;
+    position:fixed;
+    background:rgba(2, 70, 88, 0.8);
+    transition:all 500ms ease;
+}
+
+.modal_container:target{
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modal_container > div{
+    transform: translate(0px, -50px);
+	transition: all 500ms ease;
+}
+
+.modal_container:target > div{
+    transform: translate(0px, 0px);
+}
+
+
+.modal{
+    width:350px;
+    height:400px;
+    margin:auto;
+    position: absolute;
+    top:0px; bottom:0px;
+    right:0px; left:0px;
+    background:black;
+    border:2px solid #222;
+    padding:20px;
+    box-shadow: 0px 0px 50px 5px black;
+}
+
+.modal_heading{
+    box-sizing: border-box;
+    width:100%;
+    display:block;
+    height:60px;
+    margin-bottom:30px;
+    color:yellow;
+    padding:10px;
+    text-align: center;
+    font-size:20pt;
+    font-family: big john;
+    border-bottom: 2px solid #fefefe;
+}
+
+input{
+    margin-bottom: 15px;
+    padding:10px;
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height:50px;
+    border:0px;
+    font-family: georgia;
+    font-size: 11pt;
+    text-align: center;
+}
+
+.btnRegister{
+    background:red;
+    color:white;
+    font-size:15pt;
+    margin-top:10px;
+}
+.btnRegister:hover{
+    background:#b80000;
+}
+.close{
+    color:white;
+    position: absolute;
+    border:2px solid #333;
+    padding:7px 9px 11px 9px;
+    font-family: big john;
+    background:black;
+    text-decoration: none;
+    top:-20px;
+    right:-20px;
+    border-radius: 50%;
+    transition: background 500ms;
+}
+
+.close:hover{
+    background:#444;
+    cursor:pointer;
+}
+
+.signin{
+    color:white;
+    display:inline-block;
+    margin-top:15px;
+    text-align: left;
+    float:left;
+    text-decoration: none;
+    font-size: 13pt;
+}
+.forgotPassword{
+    color:white;
+    display:inline-block;
+    margin-top:15px;
+    text-align: right;
+    float:right;
+    text-decoration: none;
+    font-size: 13pt;
+}
+
+.signin:hover, .forgotPassword:hover{
+    text-decoration: underline;
+}
+.inner{
+display:inline-block;
+}
+
+
+ <label id="carcode">Expiry Date</label>
+					   <label id="brand">Expiry Date</label>
+					   <label id="model">Expiry Date</label>
+					   	   <label id="price">Expiry Date</label>
+		              <label id="color">Expiry Date</label>
+					   <label id="year">Expiry Date</label>
+					      <label id="type">Expiry Date</label>
+		

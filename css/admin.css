@@ -1,0 +1,207 @@
+/* to style the body part */
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+/* this is to style the navigation */
+
+.nav {
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+
+.nav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 36px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav-right{
+	
+float:right;
+}
+
+/* Change the color of links on hover */
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+
+.nav a:active {
+  background-color: black;
+  font-style: initial;
+  color: white;
+}
+hr{
+ border-top: 2px solid goldenrod;
+}
+
+#empTable {
+  float: left;
+border: 1px;
+width: 25%;
+height: 600px;
+text-align: center;
+font-size: larger;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#empTable a{
+  color: white;
+}
+#empTable td:hover{
+  background-color: goldenrod;
+  color: black;
+}
+#empTable a:hover{
+  color: black;
+}
+#add{
+  float:right;
+  width:75%;
+  background-image: url("../Images/home.jpg");
+  height: 600px;
+  background-position: center;
+  color: goldenrod;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+#home{
+  float:right;
+  width:75%;
+  background-image: url("../Images/hoe.png");
+  height: 600px;
+  background-position: center;
+  color: goldenrod;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+#edit{
+  float:right;
+  width:75%;
+  background-image: url("../Images/edit2.jpg");
+  height: 600px;
+  background-position: center;
+  color: goldenrod;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+#remove{
+  float:right;
+  width:75%;
+  background-image: url("../Images/re.jpg");
+  height: 600px;
+  background-position: center;
+  color: goldenrod;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+#view{
+  float:right;
+  width:75%;
+  background-image: url("../Images/edit.jpg");
+  height: 600px;
+  background-position: center;
+   color: goldenrod; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+
+ 
+h1{
+  text-align: center;
+}
+#addcars{
+  text-align: center;
+}
+#editcars{
+  text-align: center;
+  padding-right: 2em;
+}
+#removecars{
+  text-align: center;
+}
+#viewcars{
+  text-align: center;
+
+}
+#form{
+  width: 100%;
+  
+}
+label {
+  display: inline-block;
+  width: 5em;
+  padding-right: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides */
+
+/* .one, .two {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin: 65px;
+}
+ 
+
+
+/*  This class called one specifically for left section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like backgroundImage ,background-position and webkit-clip-path , clip-path  */
+
+.one {
+  left: 0;
+  width: 61%;
+  height: 610px;
+  margin-bottom:50px;
+  top: 0;
+  margin-top:40px;
+  /* background-image: url(../Images/Image190.png); */
+  background-position: -200px -160px;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right  and webkit-clip-path , clip-path */
+
+.two {
+  width: 37%;
+  height: 610px;
+  float:right;
+  right: 0;
+  margin-top: -540px;
+  
+}
+
+/*  This class called one specifically for right  section of the page have  many elements but for the shape we use clipPath with respect to 
+ the polygon with all the margin padding in it along with there are some more parameteres like width, height,left,right  and webkit-clip-path , clip-path */
+
+ table,th,td{
+	 border:1px solid black;
+ }
+
