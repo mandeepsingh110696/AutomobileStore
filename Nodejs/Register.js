@@ -194,6 +194,18 @@ app.post("/bookingcar", (req, res) => {
   );
 });
 
+// cancel reservation
+app.delete("/cancelbooking/:id", (req, res) => {
+  console.log(`Delete car id [${req.params.id}]... `);
+  connection.query(
+    `DELETE FROM reservation WHERE invt_id = ${req.params.id}`,
+    (err, rows) => {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
+});
+
 app.post("/exchange", (req, res) => {
   console.log(`Inserting  exchnage car info  ... `);
 
