@@ -162,15 +162,25 @@ app.get("/viewCar/:id", (req, res) => {
 });
 
 // Get All cars with filter
-app.get("/viewAllCars/:filter", (req, res) => {
+app.get("/viewAllCars/:filter/:brand/:color", (req, res) => {
   var sql = "";
   console.log("Fetching all cars...");
   var filter = req.params.filter;
+  var brand = req.params.brand;
+  var color = req.params.color;
+
   console.log(req.params);
   if (filter == "All") {
     sql = "SELECT * FROM inventory ";
   } else {
-    sql = "SELECT * FROM inventory where type='" + filter + "'";
+    sql =
+      "SELECT * FROM inventory where type='" +
+      filter +
+      "' and brand='" +
+      brand +
+      "' and color='" +
+      color +
+      "'";
   }
   connection.query(sql, (err, rows) => {
     if (err) throw err;

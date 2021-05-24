@@ -50,14 +50,13 @@
       <option value="Suv">Suv</option>
         </select>
         <label for="cars"style="margin-left:200px;width:10%;color:#DAA520;font-size:18px;">Choose Color:</label>
-        <select name="cars" id="cars">
-          <option value="all">All</option>
+        <select name="color" id="color">
+         
          <option value="Black">Black</option>
           <option value="White">White</option>
             </select>
             <label for="cars"style="margin-left:200px;width:10%;color:#DAA520;font-size:18px;">Choose Brand:</label>
-        <select name="cars" id="cars">
-        <option value="all">All</option>
+        <select name="brand" id="brand">
           <option value="Lamborghini">Lamborghini</option>
           <option value="Hyundai">Hyundai</option>
           <option value="BMW">BMW</option>
@@ -140,7 +139,19 @@ function filter() {
 	var e = document.getElementById("cars");
 	var strUser = e.options[e.selectedIndex].value;
 	var strUser1 = e.options[e.selectedIndex].text;
-	viewAllCars(strUser1);
+	
+	
+		var brand = document.getElementById("brand");
+	var strbrand = brand.options[brand.selectedIndex].value;
+	var strbrand1 = brand.options[brand.selectedIndex].text;
+	
+	
+	
+	var color = document.getElementById("color");
+	var strcolor = color.options[color.selectedIndex].value;
+	var strcolor1 =  color.options[color.selectedIndex].text;
+	
+	viewAllCars(strUser1,strbrand1,strcolor1);
 
 }
 
@@ -151,14 +162,14 @@ function signout(){
 	
 	
 	
-	function viewAllCars(filter){
+	function viewAllCars(filter,brand,color){
 	     
 		  
 		 $(document).ready(function () {
 		
 	 
 		 
-		$.get(url + `/viewAllCars/${filter}`,(res) => {
+		$.get(url + `/viewAllCars/${filter}/${brand}/${color}`,(res) => {
 		// Get All Cars
 	   
 		console.log('Getting all cars');
