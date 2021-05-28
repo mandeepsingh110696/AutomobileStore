@@ -1036,6 +1036,68 @@ cell11.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId 
 			passValuesEight(opt);
 		}
 		
+		if(opt==9){
+		passValues(opt);	
+		}
+		if(opt==10){
+			passValuesTwo(opt);
+		}
+		
+		if(opt==11){
+			passValuesThree(opt);
+		}
+		
+		if(opt==12){
+			passValuesFour(opt);
+		}
+		
+		if(opt==13){
+			passValuesFive(opt);
+		}
+		
+		if(opt==14){
+			passValuesSix(opt);
+		}
+		
+		if(opt==15){
+			passValuesSeven(opt);
+		}
+		
+		if(opt==16){
+			passValuesEight(opt);
+		}
+		
+		
+			if(opt==17){
+		passValues(opt);	
+		}
+		if(opt==18){
+			passValuesTwo(opt);
+		}
+		
+		if(opt==19){
+			passValuesThree(opt);
+		}
+		
+		if(opt==20){
+			passValuesFour(opt);
+		}
+		
+		if(opt==21){
+			passValuesFive(opt);
+		}
+		
+		if(opt==22){
+			passValuesSix(opt);
+		}
+		
+		if(opt==23){
+			passValuesSeven(opt);
+		}
+		
+		if(opt==24){
+			passValuesEight(opt);
+		}
 		
 	}
 
@@ -1266,6 +1328,424 @@ function passValues(opt){
 		return false;
 	}
 	
+		function passValues9(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode9").innerHTML;
+		var brand9=document.getElementById("brand9").innerHTML;
+		var model9=document.getElementById("model9").innerHTML;
+		var price9=document.getElementById("price9").innerHTML;
+		var color9=document.getElementById("color9").innerHTML;
+		var year9=document.getElementById("year9").innerHTML;
+		var type9=document.getElementById("type9").innerHTML;
+		var desc9=document.getElementById("desc9").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand9",brand9);
+		localStorage.setItem("model9",model9);
+		localStorage.setItem("price9",price9);
+		localStorage.setItem("color9",color9);
+		localStorage.setItem("year9",year9);
+		localStorage.setItem("type9",type9);
+		localStorage.setItem("desc9",desc9);
+		localStorage.setItem("opt9",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+	
+		function passValues10(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode10").innerHTML;
+		var brand10=document.getElementById("brand10").innerHTML;
+		var model10=document.getElementById("model10").innerHTML;
+		var price10=document.getElementById("price10").innerHTML;
+		var color10=document.getElementById("color10").innerHTML;
+		var year10=document.getElementById("year10").innerHTML;
+		var type10=document.getElementById("type10").innerHTML;
+		var desc10=document.getElementById("desc10").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand10",brand10);
+		localStorage.setItem("model10",model10);
+		localStorage.setItem("price10",price10);
+		localStorage.setItem("color10",color10);
+		localStorage.setItem("year10",year10);
+		localStorage.setItem("type10",type10);
+		localStorage.setItem("desc10",desc10);
+		localStorage.setItem("opt10",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues11(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode11").innerHTML;
+		var brand11=document.getElementById("brand11").innerHTML;
+		var model11=document.getElementById("model11").innerHTML;
+		var price11=document.getElementById("price11").innerHTML;
+		var color11=document.getElementById("color11").innerHTML;
+		var year11=document.getElementById("year11").innerHTML;
+		var type11=document.getElementById("type11").innerHTML;
+		var desc11=document.getElementById("desc11").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand11",brand11);
+		localStorage.setItem("model11",model11);
+		localStorage.setItem("price11",price11);
+		localStorage.setItem("color11",color11);
+		localStorage.setItem("year11",year11);
+		localStorage.setItem("type11",type11);
+		localStorage.setItem("desc11",desc11);
+		localStorage.setItem("opt11",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues12(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode12").innerHTML;
+		var brand12=document.getElementById("brand12").innerHTML;
+		var model12=document.getElementById("model12").innerHTML;
+		var price12=document.getElementById("price12").innerHTML;
+		var color12=document.getElementById("color12").innerHTML;
+		var year12=document.getElementById("year12").innerHTML;
+		var type12=document.getElementById("type12").innerHTML;
+		var desc12=document.getElementById("desc12").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand12",brand12);
+		localStorage.setItem("model12",model12);
+		localStorage.setItem("price12",price12);
+		localStorage.setItem("color12",color12);
+		localStorage.setItem("year12",year12);
+		localStorage.setItem("type12",type12);
+		localStorage.setItem("desc12",desc12);
+		localStorage.setItem("opt12",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues13(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode13").innerHTML;
+		var brand13=document.getElementById("brand13").innerHTML;
+		var model13=document.getElementById("model13").innerHTML;
+		var price13=document.getElementById("price13").innerHTML;
+		var color13=document.getElementById("color13").innerHTML;
+		var year13=document.getElementById("year13").innerHTML;
+		var type13=document.getElementById("type13").innerHTML;
+		var desc13=document.getElementById("desc13").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand13",brand13);
+		localStorage.setItem("model13",model13);
+		localStorage.setItem("price13",price13);
+		localStorage.setItem("color13",color13);
+		localStorage.setItem("year13",year13);
+		localStorage.setItem("type13",type13);
+		localStorage.setItem("desc13",desc13);
+		localStorage.setItem("opt13",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues14(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode14").innerHTML;
+		var brand14=document.getElementById("brand14").innerHTML;
+		var model14=document.getElementById("model14").innerHTML;
+		var price14=document.getElementById("price14").innerHTML;
+		var color14=document.getElementById("color14").innerHTML;
+		var year14=document.getElementById("year14").innerHTML;
+		var type14=document.getElementById("type14").innerHTML;
+		var desc14=document.getElementById("desc14").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode14",carcode14);
+		localStorage.setItem("brand14",brand14);
+		localStorage.setItem("model14",model14);
+		localStorage.setItem("price14",price14);
+		localStorage.setItem("color14",color14);
+		localStorage.setItem("year14",year14);
+		localStorage.setItem("type14",type14);
+		localStorage.setItem("desc14",desc14);
+		localStorage.setItem("opt14",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues15(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode15").innerHTML;
+		var brand15=document.getElementById("brand15").innerHTML;
+		var model15=document.getElementById("model15").innerHTML;
+		var price15=document.getElementById("price15").innerHTML;
+		var color15=document.getElementById("color15").innerHTML;
+		var year15=document.getElementById("year15").innerHTML;
+		var type15=document.getElementById("type15").innerHTML;
+		var desc15=document.getElementById("desc15").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand15",brand15);
+		localStorage.setItem("model15",model15);
+		localStorage.setItem("price15",price15);
+		localStorage.setItem("color15",color15);
+		localStorage.setItem("year15",year15);
+		localStorage.setItem("type15",type15);
+		localStorage.setItem("desc15",desc15);
+		localStorage.setItem("opt15",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues16(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode16").innerHTML;
+		var brand16=document.getElementById("brand16").innerHTML;
+		var model16=document.getElementById("model16").innerHTML;
+		var price16=document.getElementById("price16").innerHTML;
+		var color16=document.getElementById("color16").innerHTML;
+		var year16=document.getElementById("year16").innerHTML;
+		var type16=document.getElementById("type16").innerHTML;
+		var desc16=document.getElementById("desc16").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode16);
+		localStorage.setItem("brand16",brand16);
+		localStorage.setItem("model16",model16);
+		localStorage.setItem("price16",price16);
+		localStorage.setItem("color16",color16);
+		localStorage.setItem("year16",year16);
+		localStorage.setItem("type16",type16);
+		localStorage.setItem("desc16",desc16);
+		localStorage.setItem("opt16",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues17(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode17").innerHTML;
+		var brand17=document.getElementById("brand17").innerHTML;
+		var model17=document.getElementById("model17").innerHTML;
+		var price17=document.getElementById("price17").innerHTML;
+		var color17=document.getElementById("color17").innerHTML;
+		var year17=document.getElementById("year17").innerHTML;
+		var type17=document.getElementById("type17").innerHTML;
+		var desc17=document.getElementById("desc17").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand17",brand17);
+		localStorage.setItem("model17",model17);
+		localStorage.setItem("price17",price17);
+		localStorage.setItem("color17",color17);
+		localStorage.setItem("year17",year17);
+		localStorage.setItem("type17",type17);
+		localStorage.setItem("desc17",desc17);
+		localStorage.setItem("opt17",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues18(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode18").innerHTML;
+		var brand18=document.getElementById("brand18").innerHTML;
+		var model18=document.getElementById("model18").innerHTML;
+		var price18=document.getElementById("price18").innerHTML;
+		var color18=document.getElementById("color18").innerHTML;
+		var year18=document.getElementById("year18").innerHTML;
+		var type18=document.getElementById("type18").innerHTML;
+		var desc18=document.getElementById("desc18").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand18",brand18);
+		localStorage.setItem("model18",model18);
+		localStorage.setItem("price18",price18);
+		localStorage.setItem("color18",color18);
+		localStorage.setItem("year18",year18);
+		localStorage.setItem("type18",type18);
+		localStorage.setItem("desc18",desc18);
+		localStorage.setItem("opt18",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues19(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode19").innerHTML;
+		var brand19=document.getElementById("brand19").innerHTML;
+		var model19=document.getElementById("model19").innerHTML;
+		var price19=document.getElementById("price19").innerHTML;
+		var color19=document.getElementById("color19").innerHTML;
+		var year19=document.getElementById("year19").innerHTML;
+		var type19=document.getElementById("type19").innerHTML;
+		var desc19=document.getElementById("desc19").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand19",brand19);
+		localStorage.setItem("model19",model19);
+		localStorage.setItem("price19",price19);
+		localStorage.setItem("color19",color19);
+		localStorage.setItem("year19",year19);
+		localStorage.setItem("type19",type19);
+		localStorage.setItem("desc19",desc19);
+		localStorage.setItem("opt19",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues20(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode20").innerHTML;
+		var brand20=document.getElementById("brand20").innerHTML;
+		var model20=document.getElementById("model20").innerHTML;
+		var price20=document.getElementById("price20").innerHTML;
+		var color20=document.getElementById("color20").innerHTML;
+		var year20=document.getElementById("year20").innerHTML;
+		var type20=document.getElementById("type20").innerHTML;
+		var desc20=document.getElementById("desc20").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode20",carcode20);
+		localStorage.setItem("brand20",brand20);
+		localStorage.setItem("model20",model20);
+		localStorage.setItem("price20",price20);
+		localStorage.setItem("color20",color20);
+		localStorage.setItem("year20",year20);
+		localStorage.setItem("type20",type20);
+		localStorage.setItem("desc20",desc20);
+		localStorage.setItem("opt20",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues21(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode21").innerHTML;
+		var brand21=document.getElementById("brand21").innerHTML;
+		var model21=document.getElementById("model21").innerHTML;
+		var price21=document.getElementById("price21").innerHTML;
+		var color21=document.getElementById("color21").innerHTML;
+		var year21=document.getElementById("year21").innerHTML;
+		var type21=document.getElementById("type21").innerHTML;
+		var desc21=document.getElementById("desc21").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode21);
+		localStorage.setItem("brand21",brand21);
+		localStorage.setItem("model21",model21);
+		localStorage.setItem("price21",price21);
+		localStorage.setItem("color21",color21);
+		localStorage.setItem("year21",year21);
+		localStorage.setItem("type21",type21);
+		localStorage.setItem("desc21",desc21);
+		localStorage.setItem("opt21",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues22(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode22").innerHTML;
+		var brand22=document.getElementById("brand22").innerHTML;
+		var model22=document.getElementById("model22").innerHTML;
+		var price22=document.getElementById("price22").innerHTML;
+		var color22=document.getElementById("color22").innerHTML;
+		var year22=document.getElementById("year22").innerHTML;
+		var type22=document.getElementById("type22").innerHTML;
+		var desc22=document.getElementById("desc22").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand22",brand22);
+		localStorage.setItem("model22",model22);
+		localStorage.setItem("price22",price22);
+		localStorage.setItem("color22",color22);
+		localStorage.setItem("year22",year22);
+		localStorage.setItem("type22",type22);
+		localStorage.setItem("desc22",desc22);
+		localStorage.setItem("opt22",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues23(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode23").innerHTML;
+		var brand23=document.getElementById("brand23").innerHTML;
+		var model23=document.getElementById("model23").innerHTML;
+		var price23=document.getElementById("price23").innerHTML;
+		var color23=document.getElementById("color23").innerHTML;
+		var year23=document.getElementById("year23").innerHTML;
+		var type23=document.getElementById("type23").innerHTML;
+		var desc23=document.getElementById("desc23").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand23",brand23);
+		localStorage.setItem("model23",model23);
+		localStorage.setItem("price23",price23);
+		localStorage.setItem("color23",color23);
+		localStorage.setItem("year23",year23);
+		localStorage.setItem("type23",type23);
+		localStorage.setItem("desc23",desc23);
+		localStorage.setItem("opt23",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		function passValues24(opt){
+		
+	debugger
+		var carcode=document.getElementById("carcode24").innerHTML;
+		var brand24=document.getElementById("brand24").innerHTML;
+		var model24=document.getElementById("model24").innerHTML;
+		var price24=document.getElementById("price24").innerHTML;
+		var color24=document.getElementById("color24").innerHTML;
+		var year24=document.getElementById("year24").innerHTML;
+		var type24=document.getElementById("type24").innerHTML;
+		var desc24=document.getElementById("desc24").innerHTML;
+		
+		debugger
+		localStorage.setItem("carcode",carcode);
+		localStorage.setItem("brand24",brand24);
+		localStorage.setItem("model24",model24);
+		localStorage.setItem("price24",price24);
+		localStorage.setItem("color24",color24);
+		localStorage.setItem("year24",year24);
+		localStorage.setItem("type24",type24);
+		localStorage.setItem("desc24",desc24);
+		localStorage.setItem("opt24",opt);
+			window.location="Booking.html";
+		
+		return false;
+	}
+		
 	
 	
 	/* 	function testDrive(opt){
@@ -1554,6 +2034,7 @@ function passValues(opt){
 		var _address = document.getElementById("address").value;
 	    var _cemail = document.getElementById("cemail").value;
 		var _cphone = document.getElementById("cphone").value;
+		var _sdate = document.getElementById("sdate").value;
 		
 	
 
@@ -1610,7 +2091,10 @@ function passValues(opt){
 				document.getElementById('cphone').innerHTML =alert(" ** Please fill the phoneno field");
 				return false;
 			}
-			
+			  else   if(_sdate== ""){
+				document.getElementById('sdate').innerHTML =alert(" ** Please fill the Buy date field");
+				return false;
+			}
 				
 			else{
 			
@@ -1628,6 +2112,7 @@ function passValues(opt){
 		localStorage.setItem("address",_address);
 		localStorage.setItem("cemail",_cemail);
 		localStorage.setItem("cphone",_cphone);
+		localStorage.setItem("sdate",_sdate);
 	
 		
 		
@@ -1702,12 +2187,13 @@ function passValues(opt){
 		const address =  $('#address').val();
 	    const cemail = $('#cemail').val();
 		const cphone = $('#cphone').val();
+		const sdate = $('#sdate').val();
 
 			
 			 
 	
 
-				const booking = new Booking(carcode,brand ,model,price,color,year,type,desc,fname, lname, address, cemail, cphone);
+				const booking = new Booking(carcode,brand ,model,price,color,year,type,desc,fname, lname, address, cemail, cphone,sdate);
 				
 				     localStorage.setItem("carcode",carcode);
         localStorage.setItem("brand",brand);
@@ -1722,6 +2208,7 @@ function passValues(opt){
 		localStorage.setItem("address",address);
 		localStorage.setItem("cemail",cemail);
 		localStorage.setItem("cphone",cphone);
+		localStorage.setItem("sdate",sdate);
 
 				console.log(booking);
 
@@ -2052,11 +2539,224 @@ else{
 				
 			}
 			
+			
+						
+	function bookingHistory(){
+		 $(document).ready(function () {
+			// Get All cars by id
+		const id =localStorage.getItem("email_login");
+		console.log(`Requesting car with id ${id}`);
+
+		$.get(url + `/bookhistory/${id}`, (res) => {
+			// res is an array!
+			
+			if(res.errorcode!="403"){
+				for(const customers in res){
+				const bookhist = BookingHistory.fromRow(res[customers]);
+			console.log('data:', bookhist);
+			const res_id = bookhist.res_id;
+			
+			  const address = bookhist.address;
+			   const  email= bookhist.email;
+			    const Phoneno= bookhist.Phoneno;
+				 const fname = bookhist.fname;
+				  const lname = bookhist.lname;
+			
+			const sdate = bookhist.sdate;
+			
+			
+			
+			
+			const InvtId = bookhist.InvtId;
+			
+            const brand = bookhist.brand;
+			
+			 const model = bookhist.model;
+			  const price = bookhist.price;
+			   const color = bookhist.color;
+			    const year = bookhist.year;
+				 const type = bookhist.type;
+				  const Image = bookhist.Image;
+			
+
+
+			
+			
+const table = document.getElementById('table1');
+
+const tbody= table.getElementsByTagName('tbody')[0];
+
+const row = tbody.insertRow(tbody.rows.length);
+
+const bookhistory= new BookingHistory(res_id,address,email,Phoneno,fname,lname,sdate,InvtId,brand,model,price,color,year,type,Image);
+const cell1 = row.insertCell(0);
+const cell2 = row.insertCell(1);
+const cell3 = row.insertCell(2);
+const cell4 = row.insertCell(3);
+const cell5 = row.insertCell(4);
+const cell6 = row.insertCell(5);
+const cell7 = row.insertCell(6);
+const cell8 = row.insertCell(7);
+const cell9 = row.insertCell(8);
+const cell10 = row.insertCell(9);
+const cell11 = row.insertCell(10);
+const cell12 = row.insertCell(11);
+const cell13 = row.insertCell(12);
+const cell14= row.insertCell(13);
+const cell15= row.insertCell(14);
+
+
+cell1.innerHTML = bookhistory.res_id;
+cell2.innerHTML = bookhistory.address; 
+cell3.innerHTML = bookhistory.email;
+cell4.innerHTML = bookhistory.Phoneno;
+cell5.innerHTML =  bookhistory.fname;
+cell6.innerHTML =  bookhistory.lname;
+cell7.innerHTML =  bookhistory.sdate;
+cell8.innerHTML = bookhistory.InvtId;
+cell9.innerHTML = bookhistory.brand;
+cell10.innerHTML =  bookhistory.model;
+cell11.innerHTML = bookhistory.price; 
+cell12.innerHTML = bookhistory.color;
+cell13.innerHTML = bookhistory.year;
+cell14.innerHTML =  bookhistory.type;
+cell15.innerHTML = `<img style="width:150px;height:150px;"  src= "${bookhistory.Image}";/>`;
+ }
+			}
+else{
+	alert(res.message);
+}
+		});	
+		});
+		// alert("Invalid Id");
+	}
+	
+			
 		
 		
 		
 		
 		
+	
+	function validationContactUs(){
+
+	
+   $(document).ready(function() {
+			
+		var _name = document.getElementById("namee").value;
+		var _lastname = document.getElementById("lastname").value;
+		var _email = document.getElementById("email").value;
+		var _date = document.getElementById("date").value;
+		var _country = document.getElementById("country").value;
+		var _message = document.getElementById("message").value;
+		var _reasonmessage = document.getElementById("reasonmessage").value;
+		
+		
+		
+		
+				if(_name == ""){
+				document.getElementById('namee').innerHTML =alert(" ** Please fill the Name field");
+				return false;
+			}
+			else if((_name.length <= 2) || (_name.length > 20)) {
+				document.getElementById('namee').innerHTML = alert("** Name length must be between 2 and 20");
+				return false;	
+			}
+			else if(!isNaN(_name)){
+				document.getElementById('namee').innerHTML =alert(" ** only characters are allowed in Name field" );
+				return false;
+			} 
+
+
+			else if(_lastname == ""){
+				document.getElementById('lastname').innerHTML =alert(" ** Please fill the lastname field");
+				return false;
+			}
+			 else if((_lastname.length <= 2) || (_lastname.length > 20)) {
+				document.getElementById('lastname').innerHTML = alert("**  lastname length must be between 2 and 20");
+				return false;	
+			}
+			else if(!isNaN(_lastname)){
+				document.getElementById('lastname').innerHTML =alert(" ** only characters are allowed in lastname field" );
+				return false;
+			}
+			 
+			else if(_email == ""){
+				document.getElementById('email').innerHTML =alert(" ** Please fill the email id` field");
+				return false;
+			}
+			 else if(_email.indexOf('@') <= 0 ){
+				document.getElementById('email').innerHTML =alert(" ** @ Invalid Position");
+				return false;
+			}
+ 
+			else if((_email.charAt(_email.length-4)!='.') && (_email.charAt(_email.length-3)!='.')){
+				document.getElementById('email').innerHTML =alert(" ** . Invalid Position");
+				return false;
+			} 
+			
+				else if(_date == ""){
+				document.getElementById('date').innerHTML =alert(" ** Please fill the Date field");
+				return false;
+			}
+		
+			 var eff = document.getElementById("country");
+                var strUserr = eff.options[eff.selectedIndex].value;
+
+                var strUser2 = eff.options[eff.selectedIndex].text;
+                if(strUserr==0)
+                {
+                    alert("Please select a country");
+					return false;
+                }
+           
+			
+			else if(_message == ""){
+				document.getElementById('message').innerHTML =alert(" ** Please fill the Message field");
+				return false;
+			}
+			 else if(_reasonmessage == ""){
+				document.getElementById('reasonmessage').innerHTML =alert(" ** Please fill the Reason Message field");
+				return false;
+			}
+			else
+			{
+					$('#contact').click(() => {
+				console.log('Inserting Contact us info');
+
+				const name = $('#namee').val();
+				const lname = $('#lastname').val();
+				const emal = $('#email').val();
+				const date = $('#date').val();
+				const country= $('#country').val();
+				const message= $('#message').val();
+				const reasonmessage = $('#reasonmessage').val();
+		
+
+				const contact = new Contact(name,lname,emal,date,country,message,reasonmessage);
+
+				console.log(contact);
+
+				$.post(url + '/contact', contact, (res) => {
+					console.log("Created ", res)
+					alert(res.message);
+				});
+			});
+
+			
+
+
+			return false;
+
+		}
+	});
+				
+			    
+				
+				
+			}
+			
+			
 		
 		
 		

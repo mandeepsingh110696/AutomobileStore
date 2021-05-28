@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- This will generate the title of the page -->
+  <title>BookingHistory</title>
+  <!-- This section will link the html file to css file -->
+  <link rel="stylesheet" href="../css/bookhistory.css">
+  <script src="../javascript/script.js"></script>
+  <script src="../javascript/BookingHistory.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- this div tag is used for navigation bar and for logo-->
+   <div class="nav">
+    <table>
+      <!-- Here we define the row element for navbar -->
+      <tr>
+        <!-- Here we define the column element for logo -->
+        <td>
+          <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+          <h2> <img src="../Images/goldnewlogo1.png" class="cover"> </h2>
+        </td>
+        <!-- Here we define the column element for hyperlinks for other pages -->
+        <td>
+          <!-- Here are the hyperlinks using anchor tag -->
+       <a href="Home.html">Home</a>
+						 <a  href="Inventorynew.html">Cars</a>
+						   <a  href="bookhistory.html">Booking History</a>
+                    <a class="active" href="ContactUs.html">Contact Us</a>
+					 
+        </td>
+		 <div  class="nav-right">
+					 <a href="javascript:signout();" >signout</a>
+					</div>
+      </tr>
+    </table>
+  </div>
+ 
+  
+
+ 
+ 
+ <table id="table1" style="background-color:white;margin:10px;padding:10px;border: 1px solid pink;" >
+        <thead>
+            <tr>
+			
+	
+
+			
+			    <th>Reservation_id</th>
+                <th>address</th>
+				<th>email</th>
+                <th>Phoneno</th>
+                <th>fname</th>
+                <th>lname</th>
+				<th>Buydate</th>
+                <th>Car Id</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price</th>
+				<th>Color</th>
+                <th>Year</th>
+                <th>Type</th>
+                <th>Image</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               
+                
+            </tr>
+
+			 <tr>
+               
+                
+            </tr>
+			
+			
+           
+                
+           
+            
+        </tbody>
+    </table>
+	
+ 
+
+  </section>
+
+
+
+
+      <!--  <div >
+         <footer>
+           <img src="../Images/goldnewlogo1.png"><h1 style="color: rgb(221, 183, 15); float: right; margin-right: 1004px;">Automobile Store</h1>
+     
+     <div class="social-icons">
+               <a href="https://www.facebook.com">
+                <img src="../Images/fb.png" alt="facebook" >
+                </a>
+               <a href="https://www.twitter.com">
+                <img src="../Images/twit.jpg" alt="twitter" >
+                </a>
+                <a href="https://www.instagram.com">
+                <img src="../Images/insta.jpg" alt="instagram" >
+                </a>
+                <a href="https://www.gmail.com">
+                <img src="../Images/mail.jpg" alt="gmail" >
+                </a>
+                <input type="button" value="Back to top &#8593;" class="top">
+      </div>  
+            <center> <p>Copyrights&#169; 2021 by Automobile Store.<br>All rights reserved.</p> </center>  
+        
+         </footer>
+       </div> -->
+
+
+</body>
+<script>
+window.onload = function() {
+  bookingHistory();
+};
+</script>
+
+</html>

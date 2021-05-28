@@ -196,7 +196,7 @@ app.post("/bookingcar", (req, res) => {
   console.log("body", req.body);
 
   connection.query(
-    `INSERT INTO reservation (invt_id,fname,lname,address,email,Phoneno) VALUES  ('${req.body.carcode}','${req.body.fname}','${req.body.lname}','${req.body.address}','${req.body.cemail}','${req.body.cphone}')`,
+    `INSERT INTO reservation (invt_id,fname,lname,address,email,Phoneno,sdate) VALUES  ('${req.body.carcode}','${req.body.fname}','${req.body.lname}','${req.body.address}','${req.body.cemail}','${req.body.cphone}','${req.body.sdate}')`,
     (err, rows) => {
       if (err) throw err;
       res.send(rows);
@@ -240,6 +240,39 @@ app.post("/finance", (req, res) => {
     (err, rows) => {
       if (err) throw err;
       res.json({ message: "Finance info send successfully" });
+    }
+  );
+});
+
+// booking history
+app.get("/bookhistory/:id", (req, res) => {
+  console.log("params:", req.params);
+
+  const id = req.params.id;
+  console.log(`Fetching Car with id ${id}...`);
+  var sql = `SELECT * FROM reservation a,inventory b  WHERE a.invt_id=b.InvtId and email = '${id}'`;
+  console.log(sql);
+  connection.query(sql, (err, rows) => {
+    if (err) throw err;
+    if (rows.length > 0) {
+      res.json(rows);
+      console.log("Car retreived Successfully");
+    } else {
+      res.json({ message: "Invalid Car Id", errorcode: "403" });
+    }
+  });
+});
+
+app.post("/contact", (req, res) => {
+  console.log(`Inserting  contact info  ... `);
+
+  console.log("body", req.body);
+
+  connection.query(
+    `INSERT INTO contact (name,lname,email,date,country,message,reasonmessage) VALUES  ('${req.body.name}','${req.body.lname}','${req.body.emal}','${req.body.date}','${req.body.country}','${req.body.message}','${req.body.reasonmessage}')`,
+    (err, rows) => {
+      if (err) throw err;
+      res.json({ message: "Contact info send successfully" });
     }
   );
 });
