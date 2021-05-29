@@ -11,40 +11,39 @@
 <body>
     <!-- this div tag is used for navigation bar and for logo-->
     <div class="nav">
-        <table>
-            <!-- Here we define the row element for navbar -->
-            <tr>
-                <!-- Here we define the column element for logo -->
-                <td>
-
-                    <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
-                    <h2> <img src="../Images/logo2.png" class="cover"> </h2>
-                </td>
-                <!-- Here we define the column element for hyperlinks for other pages -->
-                <td>
-                    <!-- Here are the hyperlinks using anchor tag -->
-                  <a href="Home.html">Home</a>
-                    <a href="#">Profile</a>
-						 <a  href="Inventory.html">Inventory</a>
-                    <a class="active" href="#">Contact Us</a>
-					
-                </td>
-				 <div  class="nav-right">
+    <table>
+      <!-- Here we define the row element for navbar -->
+      <tr>
+        <!-- Here we define the column element for logo -->
+        <td>
+          <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+          <h2> <img src="../Images/goldnewlogo.png" class="cover"> </h2>
+        </td>
+        <!-- Here we define the column element for hyperlinks for other pages -->
+        <td>
+          <!-- Here are the hyperlinks using anchor tag -->
+       <a href="Home.html">Home</a>
+						 <a  href="Inventorynew.html">Cars</a>
+						   <a  href="bookhistory.html">Booking History</a>
+                    <a class="active" href="ContactUs.html">Contact Us</a>
+					 
+        </td>
+		 <div  class="nav-right">
 					 <a href="javascript:signout();" >signout</a>
 					</div>
-            </tr>
-        </table>
-    </div>
+      </tr>
+    </table>
+  </div>
     <!-- this section is for main page 1st image  -->
     <section>
 
         <table>
             <tr>
                 <td width="45%">
-                    <h2 style="margin-left: 50px;font-family: Century Regular;">Auto di Lusso is a car company
+                    <h2 style="margin-left: 50px;font-family: Century Regular;">Automobile is a car company
                 luxury<br>
 				car at a realistic price.<br>
-            When renting a vehicle from us<br>
+            When buying a vehicle from us<br>
            we offer you delivery anywhere<br>
            which location is right for you.<br>
                 </td>
@@ -125,12 +124,39 @@ Learn more about our models
             </td>
         </tr>
     </table>
-
+   
+       <div >
+         <footer>
+           <img src="../Images/goldnewlogo1.png"><h1 style="color: rgb(221, 183, 15); float: right; margin-right: 1004px;">Automobile Store</h1>
+     
+     <div class="social-icons">
+               <a href="https://www.facebook.com">
+                <img src="../Images/fb.png" alt="facebook" >
+                </a>
+               <a href="https://www.twitter.com">
+                <img src="../Images/twit.jpg" alt="twitter" >
+                </a>
+                <a href="https://www.instagram.com">
+                <img src="../Images/insta.jpg" alt="instagram" >
+                </a>
+                <a href="https://www.gmail.com">
+                <img src="../Images/mail.jpg" alt="gmail" >
+                </a>
+                <input type="button" value="Back to top &#8593;" class="top">
+      </div>  
+            <center> <p>Copyrights&#169; 2021 by Automobile Store.<br>All rights reserved.</p> </center>  
+        
+         </footer>
+       </div>
 </body>
 <script>
 function signout(){
 		alert("You have been logout successfuly")
 		window.location="index.html"
 	}
+	
 </script>
+
+
+
 </html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This will generate the title of the page -->
+    <title>Contactus</title>
+    <!-- This section will link the html file to css file -->
+    <!-- <link rel="stylesheet" href="Contactus.css"> -->
+	 <link rel="stylesheet" href="../css/Contactus.css" type="text/css" />
+    <!-- This section will link the html file to font file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 <script src="../javascript/contact.js" ></script>
+		<script src="../javascript/script.js" ></script>
+</head>
+
+<body>
+
+    <!-- this div tag is used for navigation bar and for logo-->
+  <div class="nav">
+    <table>
+      <!-- Here we define the row element for navbar -->
+      <tr>
+        <!-- Here we define the column element for logo -->
+        <td>
+          <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+          <h2> <img src="../Images/goldnewlogo1.png" class="cover"> </h2>
+        </td>
+        <!-- Here we define the column element for hyperlinks for other pages -->
+        <td>
+          <!-- Here are the hyperlinks using anchor tag -->
+       <a href="Home.html">Home</a>
+						 <a  href="Inventorynew.html">Cars</a>
+						   <a  href="bookhistory.html">Booking History</a>
+                    <a class="active" href="ContactUs.html">Contact Us</a>
+					 
+        </td>
+		<!--  <div  class="nav-right">
+					 <a href="javascript:signout();" >signout</a>
+					</div> -->
+      </tr>
+    </table>
+  </div>
+ 
+     <div> 
+        <!-- This class one is for content that on the left side of the page we explain about this  in detail in css file -->
+        <div class="one">
+            <!-- For contain overall we prefer to use span tag as its more flexible -->
+            <span>
+               
+              You can use these forms<br><br>
+
+              to contact us, book<br><br>
+
+             vehicles, give your<br><br>
+
+             opinion or request<br><br>
+
+             special vehicles
+            </span>
+
+        </div>
+        <!-- This class shape  is for image(parallelogram) that on the right side of the page we explain about this  in detail in css file -->
+        <div class="shape">
+
+        </div>
+     </div> 
+    <br>
+    <br>
+    <!-- This section will generate form of type inline with various fields -->
+     <section>
+        <form>
+            <!-- This tag we  used here to break the line-->
+            <br><br><br>
+            <!-- In this we prefer to use inline css for generating form inline -->
+            <!-- This section contain label for Nom and Prénom along with inline css for color -->
+            <label style="color: white;">
+                Name<label style="color: red;"> *</label>
+                <!-- This will let user to input  Name -->
+                <input style="display: inline;" type="text" placeholder="Name" id="namee"  name="namee"/>
+
+                LastName<label style="color: red;"> *</label>
+                <!-- This will let user to input Prénom  -->
+                <input style="display: inline;" type="text" placeholder="LastName"  id="lastname"  name="lastname"/>
+            </label><br><br>
+            <!-- This section contain label for E-mail along with inline css for color and margin-right -->
+            <label style="color: white;margin-right: -4px;">E-mail</label>
+            <label style="color: red;"> *</label>
+            <!-- This will let user to input email  along with the width of the input section -->
+            <input type='email' style="width: 450px;" placeholder="enter email" id="email"  name="email"><br><br>
+            <!-- This section contain label for Date de naissance along with inline css for color  -->
+            <label style="color: white;">Date of Birth</label>
+            <label style="color: red;"> *</label>
+            <!-- This will let user to input Birthdate   -->
+            <input type='text' placeholder="Choose your Birthdate" id="date"  name="date"><br><br>
+            <!-- This section contain label for Choix de along with inline css for color and margin-right -->
+            <label style="color: white;margin-right: 58px;">Choose from</label>
+			 <label style="color: red;"> *</label>
+            <!-- This will let user to choose country   -->
+            <select id="country" name="country" >
+                <option value="">Choose a Country</option>
+                <option value="Canada">Canada</option>
+                <option value=">Mexico">Mexico</option>
+                <option value="United States">United States</option>
+				
+				
+            </select><br><br>
+            <!-- This section contain label for Votre message along with inline css for color and margin-right -->
+            <label style="color: white;margin-right: 24px;">Your message</label>
+			 <label style="color: red;"> *</label>
+            <!-- This textarea will let users to enter  their message -->
+            <textarea cols="60" rows="3" id="message"  name="message"></textarea><br><br>
+            <!-- This section contain label for La raison de votre message along with inline css for color and margin-right -->
+            <label style="color: white;margin-right: 24px;">The reason for  your message</label>
+			 <label style="color: red;"> *</label>
+            <!-- This textarea will let users to enter  their message -->
+            <textarea cols="30" rows="3" id="reasonmessage"  name="reasonmessage"></textarea><br><br>
+            <!-- This section contain label for Que pensez-vous de notre enterprise? along with inline css for color and margin-right -->
+   
+            <!-- This section will generate star rating using class fa fa star checked -->
+      
+            <!-- This section contain label forest un champ obligatoire? along with inline css for color and margin-right -->
+            <label style="color: white;margin-right: 24px;">(<label style="color: red;"> *</label>Its an obligatory
+                field?)</label>
+
+            <br><br>
+
+            <!-- This section will let users to submit their data by pressing the button -->
+            <input type="button" style="background-color: grey;color:white" value="Submit"  id="contact"  name="contact" onclick="validationContactUs()"/>
+
+
+        </form>
+
+        <br>
+        <br>
+        <!-- This section uses table tag to generate split  image by using various css classes which are already explained in css classes 
+            along with that in the outer part we call splitimg which is defined in css and we give cellspacing ,cellpadding  -->
+        <table id="splitimg" cellspacing="0" cellpadding="0">
+            <!-- Here for every row we call transp class to keep the transparency maintained -->
+            <tr>
+                <td class="transp"> </td>
+            </tr>
+            <!-- Here for every row we call hide class to hide elements occasionally -->
+            <tr>
+                <td class="hide"></td>
+            </tr>
+            <!-- Here for every row we call transp class to keep the transparency maintained -->
+            <tr>
+                <td class="transp"> </td>
+            </tr>
+            <!-- Here for every row we call hide class to hide elements occasionally -->
+            <tr>
+                <td class="hide"></td>
+            </tr>
+            <!-- Here for every row we call transp class to keep the transparency maintained -->
+            <tr>
+                <td class="transp"> </td>
+            </tr>
+        </table>
+
+        <!-- Here we use class row is used to hold column in it   -->
+        <div class="row">
+            <!-- Here we use class Column one is used to define column in it along with that inline css that will bind color in it   -->
+            <div class="column" style="color:white;">
+                <!-- Here we use H2 tag for writing  address along with color and line height in it    -->
+                <h2 style="color:#CA9B4B">Our address:</h2>
+                <h2 style="line-height: 0px;">5489 Boulevard Rene Levesque</h2>
+                <h2>Montreal,Quebec</h2>
+                <h2 style="line-height: 0px;">H6T5H9</h2>
+
+            </div>
+            <!-- Here we use class Column two is used to define column in it along with that inline css that will bind color in it   -->
+            <div class="column" style="color:white;">
+                <!-- Here we use H2 tag for writing  email along with color and line height in it    -->
+                <h2 style="color:#CA9B4B">Our email address:</h2>
+                <h2 style="line-height: 0px;">Automobile@gmail.com</h2>
+
+            </div>
+            <!-- Here we use class Column three is used to define column in it along with that inline css that will bind color in it   -->
+            <div class="column" style="color:white;">
+                <!-- Here we use H2 tag for writing contact details along with color and line height in it   -->
+                <h2 style="color:#CA9B4B">Our Contact No:</h2>
+                <h2 style="line-height: 0px;">514-662-6589</h2>
+                <h2>1-800-813-2569(free of charge)</h2>
+
+
+            </div>
+        </div>
+
+
+    </section> 
+</body>
+<script>
+function signout(){
+		alert("You have been logout successfuly")
+		window.location="index.html"
+	}
+</script>
+</html>

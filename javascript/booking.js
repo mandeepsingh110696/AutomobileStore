@@ -1,5 +1,5 @@
 class Booking {
-	constructor(carcode,brand ,model,price,color,year,type,desc,fname, lname, address, cemail,cphone) {
+	constructor(carcode,brand ,model,price,color,year,type,desc,fname, lname, address, cemail,cphone,sdate) {
 		
 		this.carcode=carcode;
 		this.brand = brand;
@@ -14,11 +14,12 @@ class Booking {
 		this.address = address;
 		this.cemail = cemail;
 		this.cphone = cphone;
+		this.sdate = sdate;
 	
 	}
 
 	static fromRow(row) {
-		return new Booking(row.carcode,row.brand ,row.model,row.price,row.color,row.year,row.type,row.desc,row.fname, row.lname,row.email,row.address,row.cphone);
+		return new Booking(row.carcode,row.brand ,row.model,row.price,row.color,row.year,row.type,row.desc,row.fname, row.lname,row.email,row.address,row.cphone,row.sdate);
 	}
 
 	toString() {

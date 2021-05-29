@@ -128,11 +128,13 @@ label {
 }
 
 .image{
-  float: left;
+float: left;
   width: 50%;
   padding: 0%;
   margin-left: 10%;
   margin-top:30px;
+ 
+        
 }
 .image1{
   float: left;
@@ -177,7 +179,7 @@ footer{
   width: 100%;
  padding: 0;
  height: 200px;
- margin-top: 395%;
+ margin-top: 5%;
  background-repeat: no-repeat;
  background-position: right;
  margin-bottom: 0;

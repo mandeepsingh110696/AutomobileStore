@@ -12,7 +12,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="nav">
+        <table>
+            <!-- Here we define the row element for navbar -->
+            <tr>
+                <!-- Here we define the column element for logo -->
+                <td>
+
+                    <!-- Here we are providing the image of logo and for styling we are using cover class which is defined in css class  -->
+                    <h2> <img src="../Images/goldnewlogo1.png" class="cover"> </h2>
+                </td>
+                <!-- Here we define the column element for hyperlinks for other pages -->
+                <td> 
+                    <!-- Here are the hyperlinks using anchor tag -->
+                  <a href="addcars.html">Inventory Management</a>
+                    <a href="viewcustomer.html">View Customers</a>
+                    <a class="active" href="Contactus.html">Contact Us</a>
+					
+                </td>
+				 <div  class="nav-right">
+					 <a href="javascript:signout();" >signout</a>
+					</div>
+            </tr>
+        </table>
+    </div>
     <hr>
     <table border="1px" id="empTable">
         <tr>
@@ -63,6 +86,10 @@
         <label>Type</label>
         <input type="text"size="25"  id="etype" name="etype"><br><br>
         </div>
+		  <div id="form">
+        <label style="margin-left:160px;">Description</label>
+         <textarea id="edesc" name="edesc" rows="4" cols="50"> </textarea><br><br>
+        </div>
         <div id="form">
         <label>Image</label>
         <input type="file" size="25"  id="eimg" name="eimg"><br><br>
@@ -87,6 +114,7 @@
 	document.getElementById("ecolor").value=localStorage.getItem("brandcolor");
 	document.getElementById("eyear").value=localStorage.getItem("brandyear");
 	document.getElementById("etype").value=localStorage.getItem("brandtype");
+	document.getElementById("edesc").value=localStorage.getItem("branddesc");
 </script>
 </body>
 </html>

@@ -51,7 +51,7 @@
              <span style="color:black;" id="cphone"></span><br>
 			  
 			     <label style="color:black;">BuyDate:-</label>
-				  <span style="color:black;" id="bdate"></span><br>
+				  <span style="color:black;" id="sdate"></span><br>
 				  
 				   <label style="color:black;">Price:-</label>
              <span style="color:black;" id="price"></span><br>
@@ -118,6 +118,7 @@
 	 document.getElementById("address").innerHTML=localStorage.getItem("address");
 	 document.getElementById("cemail").innerHTML=localStorage.getItem("cemail");
 	  document.getElementById("cphone").innerHTML=localStorage.getItem("cphone");
+	   document.getElementById("sdate").innerHTML=localStorage.getItem("sdate");
 	   if(localStorage.getItem("payment_option")=="exchange"){
 	     document.getElementById("eprice").innerHTML=price-localStorage.getItem("estimatedprice")+"$";
 	   

@@ -189,6 +189,25 @@ app.get("/viewAllCars/:filter/:brand/:color", (req, res) => {
   });
 });
 
+// Get All cars with filter
+app.get("/viewAllCar/:filter", (req, res) => {
+  var sql = "";
+  console.log("Fetching all cars...");
+  var filter = req.params.filter;
+  console.log(req.params);
+  if (filter == "All") {
+    sql = "SELECT * FROM inventory ";
+  } else {
+    sql = "SELECT * FROM inventory where type='" + filter + "'";
+  }
+  console.log(sql);
+  connection.query(sql, (err, rows) => {
+    if (err) throw err;
+    console.log("rows", rows);
+    res.json(rows);
+  });
+});
+
 // Car Reservation
 app.post("/bookingcar", (req, res) => {
   console.log(`booking car ... `);
@@ -275,6 +294,18 @@ app.post("/contact", (req, res) => {
       res.json({ message: "Contact info send successfully" });
     }
   );
+});
+
+// Get All Customers
+app.get("/viewCustomers", (req, res) => {
+  console.log("Fetching all customers...");
+
+  const sql = "SELECT * FROM register";
+  connection.query(sql, (err, rows) => {
+    if (err) throw err;
+    console.log("rows", rows);
+    res.json(rows);
+  });
 });
 // Listen
 app.listen(port, () => {

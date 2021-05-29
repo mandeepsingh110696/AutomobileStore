@@ -1,0 +1,168 @@
+/* This class will help us to adjust the position to relative that is with respect to the other conatiner along with that width set to 100% */
+
+
+
+/* These two classes called one and two will set the positon to absolute meaning it will be stating no matter what and there are some 
+other attributes for width,height and margin from all sides */
+
+.one, .two {
+  position: absolute;
+  height: 370px;
+  width: 50%;
+  margin: 65px;
+}
+
+/*  This class called one specifically for left section of the page have  many elements its for content which has the following attributes
+   such as left,width,height,top and margin-top */
+
+.one {
+  left: 0;
+  width: 50%;
+  height: 450px;
+  top: 0;
+  margin-top: 190px;
+}
+
+/*  This class called shape specifically for right section of the page have  many elements but for the shape we use clipPath with respect to 
+ the parallelogram with  the margin-left ,padding,width,height,right,top in it along with there are some more parameteres like backgroundimage ,
+ background-size,webkit-clip-path and clip-path and outer shape function is polygon and by adjusting the margin ,padding left right 
+  bottom top will generate the parallelogram  */
+
+.shape {
+  width: 50%;
+  height: 550px;
+  right: 0;
+  top: 0;
+  margin-left: 670px;
+  background-image: url(../Images/Image20.png);
+  background-size: 100% 100%;
+  margin-top: -90px;
+  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+/* Basically for all the content section we prefer span for its flexibility along with that  we set some more parameters such as color,
+backgroundcolor,margin-left  and all of this content is in div*/
+
+div span {
+  color: white;
+  font-size: 30px;
+}
+
+/* This body class basically fill background color  black with respect to the body tag */
+
+body {
+  background-color: black;
+}
+
+/* This checked class  basically fill  color  to orange with respect to the checked class */
+
+.checked {
+  color: orange;
+}
+
+/* This * will give the whole page  box-sizing to border-box */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other along with that float which is left ,width, padding,height */
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+
+/* Clear floats after the columns with display in form of table and it will clear the divs */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* This  #splitimg used by id by giving the background as image with width,height,background-size to cover; */
+
+#splitimg {
+  background: url(../Images/Group4.png);
+  width: 1100px;
+  height: 200px;
+  background-size: cover;
+  /* clip-path: polygon(0 0, 100% 0, 82% 20%, 0 20%);  */
+}
+
+/* This hide class will provide background-color to black along with width and height */
+
+.hide {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+}
+
+/* This transp class will provide border along with width and height */
+
+.transp {
+  border: 2px solid #000000;
+  width: 300px;
+  height: 113px;
+}
+
+/* this is to style the navigation */
+
+.nav {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+
+.nav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 36px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+
+.nav a:active {
+  background-color: black;
+  font-style: initial;
+  color: white;
+}
+
+
+.cover {
+  width: 50%;
+  margin-left: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+  margin-left: 35px;
+}

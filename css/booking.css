@@ -23,7 +23,7 @@ body{
 }
 .show-btn, .container{
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 50%;
   bottom:-73%;
   transform: translate(-50%, -50%);
@@ -37,6 +37,7 @@ input[type="checkbox"]{
  
   background: #fff;
   width: 410px;
+  height:825px;
   padding: 30px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
@@ -46,7 +47,7 @@ input[type="checkbox"]{
 .container .close-btn{
   position: absolute;
   right: 20px;
-  top: 55px;
+  top: 45px;
   font-size: 18px;
   cursor: pointer;
 }
@@ -59,19 +60,19 @@ input[type="checkbox"]{
   text-align: center;
 }
 .container form{
-  margin-top: -40px;
+  margin-top: -20px;
   margin-bottom:0px;
 }
 .container form .data{
-  height: 200px;
+  height: 190px;
   width: 100%;
-  margin: 40px 0;
+  margin: 50px 0;
 }
 form .data label{
   font-size: 18px;
 }
 form .data input{
-  height: 70%;
+  height: 100%;
   width: 100%;
   padding-left: 10px;
   font-size: 17px;

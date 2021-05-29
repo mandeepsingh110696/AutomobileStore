@@ -93,3 +93,45 @@ float:right;
   /* Some padding */
   font-size: 15pt;
 }
+
+
+footer{
+
+  background-image: url(../Images/image1.png);
+  width: 100%;
+ padding: 0;
+ height: 200px;
+
+ background-repeat: no-repeat;
+ background-position: right;
+ margin-bottom: 0;
+ }
+p{
+  font-size: larger;
+  font-weight: bolder;
+  color: #000000;
+  padding-top: 25px;
+
+}
+.social-icons{
+  clear: both;
+  width: 50px auto;
+  text-align: center;
+
+}
+.social-icons img{
+  width: 30px;
+  margin: 0 10px 0 10px ;
+  box-shadow: goldenrod 0 0 20px ;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.top{
+ 
+  margin-right: 150px;
+  float: right;
+  border-radius: 15px;
+  background-color: black;
+  color: goldenrod;
+  font-weight: 800;
+}

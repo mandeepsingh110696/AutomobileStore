@@ -892,7 +892,7 @@ else{
 	 
 	
 		console.log('Getting all customers')
-		$.get('http://localhost:3000/viewAllCars/all', (res) => {
+		$.get('http://localhost:3000/viewAllCar/All', (res) => {
 			console.log('data:', res);
 		    for(const customers in res){
 			const viewcar = ViewCarss.fromRow(res[customers]);
@@ -907,7 +907,7 @@ else{
 			   const color = viewcar.color;
 			    const year = viewcar.year;
 				 const type = viewcar.type;
-				 const desc = viewcar.desc;
+				 const description = viewcar.description;
 				  const Image = viewcar.Image;
 			
 
@@ -920,7 +920,7 @@ const tbody= table.getElementsByTagName('tbody')[0];
 
 const row = tbody.insertRow(tbody.rows.length);
 
-const viewCars= new ViewCarss(InvtId,brand,model,price,color,year,type,desc,Image);
+const viewCars= new ViewCarss(InvtId,brand,model,price,color,year,type,description,Image);
 console.log(viewCars.writeValue());
 const cell1 = row.insertCell(0);
 const cell2 = row.insertCell(1);
@@ -940,10 +940,11 @@ cell4.innerHTML = viewCars.price;
 cell5.innerHTML = viewCars.color;
 cell6.innerHTML = viewCars.year;
 cell7.innerHTML =  viewCars.type;
-cell8.innerHTML =  viewCars.desc;
+cell8.innerHTML =  viewCars.description;
 cell9.innerHTML = `<img style="width:150px;height:150px;"  src= "${viewCars.Image}";/>`;
-cell10.innerHTML = "<button type='button' onclick=\"editCarNew(\'" + InvtId + "\',\'" + brand + "\',\'" + model + "\',\'" + price + "\',\'" + color + "\',\'" + year + "\',\'" + type + "\',\'" + desc + "\')\">Edit</button>";
+cell10.innerHTML = "<button type='button' onclick=\"editCarNew(\'" + InvtId + "\',\'" + brand + "\',\'" + model + "\',\'" + price + "\',\'" + color + "\',\'" + year + "\',\'" + type + "\',\'" + description + "\')\">Edit</button>";
 cell11.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId + "\')\">Delete</button>";
+
 			}
 
 			
@@ -985,7 +986,7 @@ cell11.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId 
 		
 	}
 	
-	function editCarNew(id,brand, model,price,color,year,type,desc){
+	function editCarNew(id,brand, model,price,color,year,type,description){
 		localStorage.setItem("selected_cars_id",id);
 		localStorage.setItem("brandedit",brand);
 		localStorage.setItem("brandmodel",model);
@@ -993,7 +994,7 @@ cell11.innerHTML =   "<button type='button' onclick=\"deleteCarNew(\'" + InvtId 
 		localStorage.setItem("brandcolor",color);
 		localStorage.setItem("brandyear",year);
 		localStorage.setItem("brandtype",type);
-		localStorage.setItem("branddesc",desc);
+		localStorage.setItem("branddesc",description);
 		window.location="editcars.html";
 		
 		
@@ -2564,9 +2565,7 @@ else{
 			
 			const sdate = bookhist.sdate;
 			
-			
-			
-			
+		
 			const InvtId = bookhist.InvtId;
 			
             const brand = bookhist.brand;
@@ -2755,6 +2754,56 @@ else{
 				
 				
 			}
+			
+			
+			function viewCustomers(){
+		 $(document).ready(function () {
+		
+	 // Get All Customers
+	
+		console.log('Getting all customers')
+		$.get('http://localhost:3000/viewCustomers', (res) => {
+			console.log('data:', res);
+		    for(const customers in res){
+			const viewcustomerarray = ViewCustomers.fromRow(res[customers]);
+			console.log('data:', viewcustomerarray);
+			const email = viewcustomerarray.email;
+            const fname = viewcustomerarray.fname;
+			 const lname = viewcustomerarray.lname;
+			  const address = viewcustomerarray.address;
+			   const phno = viewcustomerarray.phno;
+			  
+const table = document.getElementById('table1');
+
+const tbody= table.getElementsByTagName('tbody')[0];
+
+const row = tbody.insertRow(tbody.rows.length);
+
+const viewCustomers= new ViewCustomers(email,fname,lname,address,phno);
+console.log(viewCustomers.writeValue());
+const cell1 = row.insertCell(0);
+const cell2 = row.insertCell(1);
+const cell3 = row.insertCell(2);
+const cell4 = row.insertCell(3);
+const cell5 = row.insertCell(4);
+
+cell1.innerHTML =  viewcustomerarray.email;
+cell2.innerHTML =  viewcustomerarray.fname;
+cell3.innerHTML =   viewcustomerarray.lname;
+cell4.innerHTML =   viewcustomerarray.address;
+cell5.innerHTML =  viewcustomerarray.phno;
+
+			}
+
+			
+			
+		});
+	});
+	
+	
+	
+	}
+	
 			
 			
 		
