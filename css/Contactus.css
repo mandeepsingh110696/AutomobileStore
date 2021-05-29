@@ -73,7 +73,7 @@ body {
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px;
+  height: 200px;
 }
 
 /* Clear floats after the columns with display in form of table and it will clear the divs */
@@ -152,6 +152,39 @@ body {
 }
 
 
+
+
+p{
+  font-size: larger;
+  font-weight: bolder;
+  color: #000000;
+  padding-top: 25px;
+
+}
+.social-icons{
+  clear: both;
+  width: 50px auto;
+  text-align: center;
+
+}
+.social-icons img{
+  width: 30px;
+  margin: 0 10px 0 10px ;
+  box-shadow: goldenrod 0 0 20px ;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.top{
+  
+  margin-right: 150px;
+  float: right;
+  border-radius: 15px;
+  height: 30px;
+  width: 120px;
+  background-color: black;
+  color: goldenrod;
+  font-weight: 800;
+}
 
 
 

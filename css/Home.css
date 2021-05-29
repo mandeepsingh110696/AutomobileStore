@@ -93,19 +93,6 @@ float:right;
   /* Some padding */
   font-size: 15pt;
 }
-
-
-footer{
-
-  background-image: url(../Images/image1.png);
-  width: 100%;
- padding: 0;
- height: 200px;
-
- background-repeat: no-repeat;
- background-position: right;
- margin-bottom: 0;
- }
 p{
   font-size: larger;
   font-weight: bolder;
