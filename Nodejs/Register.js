@@ -56,10 +56,16 @@ app.get("/login/", (req, res) => {
     });
     console.log(result);
     if (result && result.length > 0) {
-      var insertt = "INSERT INTO customers (email,password) values(?,?)";
+      var insertt =
+        "INSERT INTO customers(email,password) values('" +
+        email +
+        "','" +
+        password +
+        "')";
+
       values = [email, password];
       console.log("executing:" + insertt);
-      connection.query(insertt, values, (error, result, fields) => {
+      connection.query(insertt, (error, result, fields) => {
         connection.on("error", (error) => {
           console.log("[Mysql error]", error);
         });
@@ -171,10 +177,10 @@ app.get("/viewAllCars/:filter/:brand/:color", (req, res) => {
 
   console.log(req.params);
   if (filter == "All") {
-    sql = "SELECT * FROM inventory ";
+    sql = "SELECT * FROM inventory  where isBooked=1 ";
   } else {
     sql =
-      "SELECT * FROM inventory where type='" +
+      "SELECT * FROM inventory where isBooked=1 and type='" +
       filter +
       "' and brand='" +
       brand +
@@ -218,7 +224,14 @@ app.post("/bookingcar", (req, res) => {
     `INSERT INTO reservation (invt_id,fname,lname,address,email,Phoneno,sdate) VALUES  ('${req.body.carcode}','${req.body.fname}','${req.body.lname}','${req.body.address}','${req.body.cemail}','${req.body.cphone}','${req.body.sdate}')`,
     (err, rows) => {
       if (err) throw err;
-      res.send(rows);
+      var carcode = req.body.carcode;
+      connection.query(
+        `UPDATE inventory SET isBooked =0 WHERE InvtId = ${carcode}`,
+        (err, rows) => {
+          if (err) throw err;
+          res.send(rows);
+        }
+      );
     }
   );
 });
@@ -230,7 +243,14 @@ app.delete("/cancelbooking/:id", (req, res) => {
     `DELETE FROM reservation WHERE invt_id = ${req.params.id}`,
     (err, rows) => {
       if (err) throw err;
-      res.send(rows);
+      var carcode = req.params.id;
+      connection.query(
+        `UPDATE inventory SET isBooked =1 WHERE InvtId = ${carcode}`,
+        (err, rows) => {
+          if (err) throw err;
+          res.send(rows);
+        }
+      );
     }
   );
 });

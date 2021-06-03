@@ -24,7 +24,7 @@ body{
 }
 .show-btn, .container{
   position: absolute;
-  top: 54%;
+  top: 50%;
   left: 50%;
   bottom:-33%;
   transform: translate(-50%, -50%);
@@ -64,7 +64,7 @@ input[type="checkbox"]{
   margin-bottom:0px;
 }
 .container form .data{
-  height: 105px;
+  height: 125px;
   width: 100%;
   margin: 40px 0;
 }
@@ -72,7 +72,7 @@ form .data label{
   font-size: 18px;
 }
 form .data input{
-  height: 80%;
+  height: 85%;
   width: 100%;
   padding-left: 10px;
   font-size: 17px;
