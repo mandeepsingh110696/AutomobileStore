@@ -689,7 +689,7 @@ else{
 		}
 		
 		
-			window.location="testdrive.html";
+			window.location="testdrivedesc.html";
 		}
 		
 		
@@ -721,7 +721,7 @@ else{
 		
 		
 		
-		window.location="testdrive.html";
+		window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -754,7 +754,7 @@ else{
 		localStorage.setItem("desc2",desc2);
 		localStorage.setItem("opt",opt);
 			localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+			window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -785,7 +785,7 @@ else{
 		localStorage.setItem("desc3",desc3);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -815,7 +815,7 @@ else{
 		localStorage.setItem("desc4",desc4);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-		window.location="testdrive.html";
+		window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -845,7 +845,7 @@ else{
 		localStorage.setItem("desc5",desc5);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -874,7 +874,7 @@ else{
 		localStorage.setItem("desc6",desc6);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -904,7 +904,7 @@ else{
 		localStorage.setItem("desc7",desc7);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+			window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -933,7 +933,7 @@ else{
 		localStorage.setItem("desc8",desc8);
 		localStorage.setItem("opt8",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+			window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -974,7 +974,7 @@ else{
 		
 		
 		
-		window.location="testdrive.html";
+			window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1007,8 +1007,7 @@ else{
 		localStorage.setItem("desc10",desc10);
 		localStorage.setItem("opt",opt);
 			localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
-		
+	window.location="testdrivedesc.html";		
 		return false;
 	}
 		
@@ -1038,7 +1037,7 @@ else{
 		localStorage.setItem("desc11",desc11);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+			window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1068,8 +1067,7 @@ else{
 		localStorage.setItem("desc12",desc12);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-		window.location="testdrive.html";
-		
+		window.location="testdrivedesc.html";
 		return false;
 	}
 	
@@ -1098,7 +1096,7 @@ else{
 		localStorage.setItem("desc13",desc13);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1127,7 +1125,7 @@ else{
 		localStorage.setItem("desc14",desc14);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1157,7 +1155,7 @@ else{
 		localStorage.setItem("desc15",desc15);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1186,7 +1184,7 @@ else{
 		localStorage.setItem("desc16",desc16);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1216,7 +1214,7 @@ function testdrive17(opt){
 		localStorage.setItem("desc17",desc17);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+			window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1246,7 +1244,7 @@ function testdrive17(opt){
 		localStorage.setItem("desc18",desc18);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1275,7 +1273,7 @@ function testdrive17(opt){
 		localStorage.setItem("desc19",desc19);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -1304,7 +1302,7 @@ function testdrive17(opt){
 		localStorage.setItem("desc20",desc20);
 		localStorage.setItem("opt",opt);
 		localStorage.setItem("email_login",email);
-			window.location="testdrive.html";
+				window.location="testdrivedesc.html";
 		
 		return false;
 	}
@@ -3240,7 +3238,46 @@ cell5.innerHTML =  viewcustomerarray.phno;
 	}
 	
 			
+	function ttt(){
 			
+   $(document).ready(function() {
+			
+				
+		 var _tdate = document.getElementById("tdate").value;
+		
+		
+	  	if(_tdate == ""){
+				document.getElementById('tdate').innerHTML =alert(" ** Please fill the Testdrive field");
+				return false;
+			}
+			else
+			{
+					$('#tt').click(() => {
+				console.log('Test drive info');	
+				
+				const _tdate = $('#tdate').val();
+		
+			localStorage.setItem("tdate",_tdate);
+			window.location ="testdrive.html";
+				const testdrivee = new Testdrivee(tdate);
+				console.log(testdrivee);
+
+				$.post(url + '/testdrive', testdrivee, (res) => {
+					console.log("Created ", res);
+					alert(res.message);
+					window.location="testdrive.html";
+				});
+			});
+
+			
+
+
+			return false;
+
+		}
+	});
+		
+	}		
 		
 		
 		
