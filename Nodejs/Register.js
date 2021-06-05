@@ -327,6 +327,21 @@ app.get("/viewCustomers", (req, res) => {
     res.json(rows);
   });
 });
+
+app.post("/testdrive", (req, res) => {
+  console.log(`Inserting  contact info  ... `);
+
+  console.log("body", req.body);
+
+  connection.query(
+    `INSERT INTO test_drive (testdate) VALUES  ('${req.body.testdate}')`,
+    (err, rows) => {
+      if (err) throw err;
+      res.json({ message: "Test drive info send successfully" });
+    }
+  );
+});
+
 // Listen
 app.listen(port, () => {
   console.log(`Student app listening at http://localhost:${port}`);

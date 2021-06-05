@@ -3243,10 +3243,10 @@ cell5.innerHTML =  viewcustomerarray.phno;
    $(document).ready(function() {
 			
 				
-		 var _tdate = document.getElementById("tdate").value;
+		 var testdate = document.getElementById("tdate").value;
 		
 		
-	  	if(_tdate == ""){
+	  	if(testdate == ""){
 				document.getElementById('tdate').innerHTML =alert(" ** Please fill the Testdrive field");
 				return false;
 			}
@@ -3255,12 +3255,12 @@ cell5.innerHTML =  viewcustomerarray.phno;
 					$('#tt').click(() => {
 				console.log('Test drive info');	
 				
-				const _tdate = $('#tdate').val();
+				const testdate = $('#tdate').val();
 		
-			localStorage.setItem("tdate",_tdate);
-			window.location ="testdrive.html";
-				const testdrivee = new Testdrivee(tdate);
+			   localStorage.setItem("tdate",testdate);
+				const testdrivee = new Testdrivee(testdate);
 				console.log(testdrivee);
+				 
 
 				$.post(url + '/testdrive', testdrivee, (res) => {
 					console.log("Created ", res);

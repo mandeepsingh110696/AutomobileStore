@@ -23,9 +23,9 @@ body{
 }
 .show-btn, .container{
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
-  bottom:-73%;
+  bottom:-53%;
   transform: translate(-50%, -50%);
 }
 
@@ -37,7 +37,7 @@ input[type="checkbox"]{
  
   background: #fff;
   width: 410px;
-  height:825px;
+  height:525px;
   padding: 30px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }

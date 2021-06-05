@@ -1,10 +1,10 @@
 class Testdrivee{
-		constructor(tdate){
-		this.tdate= tdate;		
+		constructor(testdate){
+		this.testdate= testdate;		
 	}
 
 	static fromRow(row) {
-		return new Testdrivee(row.tdate);
+		return new Testdrivee(row.testdate);
 	}
 
 	
