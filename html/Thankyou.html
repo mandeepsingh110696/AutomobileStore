@@ -12,9 +12,20 @@
 	
 </head>
 <body>
+    <div class="nav">
+    <table>
+      <!-- Here we define the row element for navbar -->
+      <tr>
+        <!-- Here we define the column element for logo -->
+       
+		 <div  class="nav-right">
+					 <a href="javascript:signout();" >signout</a>
+					</div>
+      </tr>
+    </table>
+  </div>
 
-
-    <div class="hero">
+    <div class="hero" >
         <h1 style="color:white; text-align:center;">Thank you for buying the car with us !</h1>
     </div>
 	
@@ -60,7 +71,7 @@
 				  
 				  
 				  
-				    <Button  type="button"  class="button"  name="bo" id="bo" onclick="cancelBooking()" style="background-color:goldenrod;">Book now</Button>
+				    <Button  type="button"  class="button"  name="bo" id="bo" onclick="cancelBooking()" style="background-color:goldenrod;">CancelBooking</Button>
 		   
 			
 			
@@ -154,7 +165,13 @@
 	
 </body>
  
-	 
+	<script>
+function signout(){
+		alert("You have been logout successfuly")
+		window.location="index.html"
+	}
+	
+</script> 
 
 
 </html>

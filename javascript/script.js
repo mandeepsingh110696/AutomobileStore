@@ -3256,16 +3256,15 @@ cell5.innerHTML =  viewcustomerarray.phno;
 				console.log('Test drive info');	
 				
 				const testdate = $('#tdate').val();
-		
+				 var InvtId=localStorage.getItem("carcode");
+				  var email =localStorage.getItem("email_login");
 			   localStorage.setItem("tdate",testdate);
-				const testdrivee = new Testdrivee(testdate);
+				const testdrivee = new Testdrivee(testdate,InvtId,email);
 				console.log(testdrivee);
-				 
-
 				$.post(url + '/testdrive', testdrivee, (res) => {
 					console.log("Created ", res);
 					alert(res.message);
-					window.location="testdrive.html";
+					window.location="testdrive.html";	
 				});
 			});
 

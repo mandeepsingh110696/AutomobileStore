@@ -24,7 +24,7 @@ body{
 }
 .show-btn, .container{
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   bottom:-33%;
   transform: translate(-50%, -50%);

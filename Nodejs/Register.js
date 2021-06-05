@@ -334,7 +334,7 @@ app.post("/testdrive", (req, res) => {
   console.log("body", req.body);
 
   connection.query(
-    `INSERT INTO test_drive (testdate) VALUES  ('${req.body.testdate}')`,
+    `INSERT INTO test_drive (testdate,InvtId,cemail) VALUES  ('${req.body.testdate}','${req.body.InvtId}','${req.body.email}')`,
     (err, rows) => {
       if (err) throw err;
       res.json({ message: "Test drive info send successfully" });
